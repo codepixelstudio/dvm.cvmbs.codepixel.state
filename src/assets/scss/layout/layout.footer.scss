@@ -1,0 +1,443 @@
+// stylesheet :: site footer styles
+
+    // settings
+    $footer_width  : 100vw;
+    $footer_width_ex : calc( 100vw + 4rem );
+
+    $footer_height : 27rem;
+
+    $footer_padding    : 5rem 5rem 5rem 5rem;
+    $footer_padding_ex : 4rem 8rem 6rem 8rem;
+
+    // styles
+    #site-footer {
+
+        position: relative;
+
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        z-index: 60;
+
+        @include flex-h-j-v-t( false );
+
+        width: $footer_width;
+        min-height: $footer_height;
+        margin: 0;
+        padding: $footer_padding;
+
+        @include fill( $dark, 0.000 );
+
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 0ms;
+
+        // common
+        .footer-row {
+
+            // link list
+            .link-list {
+
+                margin: 0;
+
+                list-style: none;
+
+                // link
+                .menu-item {
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        cursor: pointer;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // secondary page
+        .secondary &,
+        .secondary.main &,
+        .secondary-default & {
+
+            position: relative;
+
+        }
+
+        // menu open state
+        &.site-menu-open {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // visible
+        &.visible {
+
+            z-index: 10;
+
+        }
+
+        // top
+        #footer-top {
+
+            @include flex-h-j-v-s( false );
+
+            width: 100%;
+
+            // columns
+            .footer-column {
+
+                width: 25%;
+                height: 100%;
+                min-height: 14rem;
+                margin: 0;
+
+                // content
+                &.content {
+
+                    @include flex-v-t-h-s( false );
+
+                    width: 18rem;
+                    padding: 0 0 0 1rem;
+
+                    // header
+                    .links-header {
+
+                        @include flex-h-s-v-c( false );
+
+                        padding: 0 0 0 0;
+
+                    }
+
+                }
+
+                // links
+                &.links {
+
+                    width: 15rem;
+                    padding: 0 0 0 0;
+
+                    &.default {
+
+                        width: 15rem;
+
+                    }
+
+                    // narrow column
+                    &.narrow {
+
+                        width: 12rem;
+
+                        .link {
+
+                            //
+
+                        }
+
+                    }
+
+                    // wide column
+                    &.wide {
+
+                        width: 20rem;
+
+                    }
+
+                }
+
+                // column headers
+                .links-header {
+
+                    @include flex-h-s-v-c( false );
+
+                    height: 2rem;
+                    padding: 0;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include typo( 2rem, 0.135em );
+
+                    @include text( $up );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // menu item
+                .menu-item {
+
+                    // link
+                    a {
+
+                        @include flex-h-s-v-c( false );
+
+                        height: auto;
+                        min-height: 2rem;
+                        margin: 0;
+                        padding: 0.25rem 0 0.25rem 0;
+
+                        @include font( $industry, 0.625rem, 600 );
+
+                        @include typo( 0.75rem, 0.075em );
+
+                        @include text( $up );
+
+                        @include color( white, 0.385 );
+
+                        transition: all 220ms linear 0ms;
+
+                        // hover state
+                        &:hover {
+
+                            color: $gold;
+
+                        }
+
+                    }
+
+                    // line break (?)
+                    .break {
+
+                        @include hide;
+
+                    }
+
+                }
+
+            }
+
+            // left
+            #footer-left {
+
+                @include flex-v-t-h-s( true );
+
+                order: 2;
+
+            }
+
+            // center
+            #footer-center {
+
+                order: 1;
+
+            }
+
+            // right
+            #footer-right {
+
+                order: 3;
+
+            }
+
+            // drawer
+            #footer-drawer {
+
+                order: 4;
+
+                // contact info
+                #contact-info {
+
+                    @include flex-v-t-h-s( false );
+
+                    flex-grow: 1;
+
+                    width: 100%;
+                    margin: 0 0 0.5rem 0;
+
+                    // labels
+                    .contact-label {
+
+                        @include flex-h-s-v-c( false );
+
+                        height: 1rem;
+                        margin: 0 0 0.25rem 0;
+
+                        @include font( $industry, 0.5625rem, 700 );
+
+                        @include typo( 0.625rem, 0.115em );
+
+                        @include text( $up );
+
+                        @include color( white, 0.185 );
+
+                    }
+
+                    // text
+                    .contact-text {
+
+                        @include flex-h-s-v-c( false );
+
+                        margin: 0 0 0.75rem 0;
+
+                        @include font( $industry, 0.6875rem, 600 );
+
+                        @include typo( 0.875rem, 0.065em );
+
+                        // @include text( $up );
+
+                        @include color( white, 0.485 );
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        // bottom row
+        #footer-bottom {
+
+            position: absolute;
+
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            z-index: 10;
+
+            @include flex-h-j-v-c( false );
+
+            width: $footer_width;
+            height: 5rem;
+            margin: 0;
+            padding: 0 5rem 0 5rem;
+
+            @include fill( $nite, 0.445 );
+
+            // links
+            .link-list {
+
+                @include flex-h-s-v-c( false );
+
+                height: 1rem;
+                margin: 0;
+
+                // link
+                .link {
+
+                    height: 0.625rem;
+                    margin: 0 0 0.375rem 0;
+                    padding: 0 0.75rem 0 0.75rem;
+
+                    border-right: 1px solid transparentize( white, 0.615 );
+
+                    @include font( $industry, 0.625rem, 600 );
+
+                    @include typo( 0.625rem, 0.065em );
+
+                    @include color( white, 0.245 );
+
+                    transition: $all220;
+
+                    cursor: pointer;
+
+                    // hover state
+                    &:hover {
+
+                        color: $gold;
+
+                        @include fill( white, 1.000 );
+
+                    }
+
+                    // first child
+                    &:first-child {
+
+                        padding-left: 0;
+
+                    }
+
+                    // last child
+                    &:last-child {
+
+                        border-right: none;
+
+                    }
+
+                }
+
+            }
+
+            // copyright text
+            .copyright {
+
+                @include flex-h-s-v-b( false );
+
+                height: 1rem;
+
+                @include font( $industry, 0.625rem, 600 );
+
+                @include typo( 0.875rem, 0.065em );
+
+                @include color( white, 0.245 );
+
+                em {
+
+                    @include flex-h-c-v-c( true );
+
+                    margin: 0 0.125rem 0 0.125rem;
+
+                    font: {
+
+                        size: 0.6875rem;
+                        weight: 700;
+                        style: normal;
+
+                    }
+
+                }
+
+            }
+
+            // required logo
+            #brand-legacy {
+
+                width: 16rem;
+                height: 2rem;
+                margin: 0;
+                padding: 0;
+
+                &:hover {
+
+                    svg {
+
+                        path {
+
+                            fill-opacity: 1.000;
+
+                        }
+
+                    }
+
+                }
+
+                svg {
+
+                    path {
+
+                        fill: white;
+                        fill-opacity: 0.825;
+
+                        transition: $all220;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,0 +1,1635 @@
+// stylesheet :: degree program post content styles
+
+    // settings
+    $degree : 1rem;
+
+    // styles
+    #site-layout {
+
+        // content container
+        .content-container {
+
+            // class hook
+            &.programs {
+
+                @include flex-v-t-h-s( false );
+
+                margin: 32rem 0 0 0;
+
+                // overlay
+                .programs-overlay {
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    width: 100%;
+                    height: 32rem;
+                    margin: 0;
+                    padding: 0;
+
+                    @include fill( $dark-nite, 0.245 );
+
+                    @include gradient(
+
+                        90deg,
+                        red, 1.000, 0%,
+                        $dark, 0.000, 100%
+
+                    );
+
+                }
+
+                // content
+                .programs-content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    width: 100%;
+                    padding: 2.5rem 5rem 5rem 5rem;
+
+                    // min-height: calc( 100vh + 2rem );
+
+                    @include color( $oil, 0.000);
+
+                    @include fill( white, 0.000 );
+
+                    // title
+                    .page-title {
+
+                        position: absolute;
+
+                        top: -5rem;
+
+                        z-index: 10;
+
+                        @include flex-h-s-v-b( false );
+
+                        height: 5rem;
+                        margin: 0 0 0 0;
+                        padding: 0 0 2.5rem 0;
+
+                        border: none;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        @include typo( 1.75rem, 0.085em );
+
+                        @include color( $gold, 0.000 );
+
+                    }
+
+                    // text
+                    p {
+
+                        // last child
+                        &:last-child {
+
+                            margin-bottom: 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+    .degree-program-container {
+
+        position: relative;
+
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: calc( 100vw + 2rem );
+
+        -webkit-filter: blur( 0px );
+                filter: blur( 0px );
+
+        transition: all 0ms linear 0ms;
+
+        // menu open class
+        .site-menu-open & {
+
+            -webkit-filter: blur( 8px );
+                    filter: blur( 8px );
+
+            transition: all 0ms linear 0ms;
+
+        }
+
+        // header
+        .degree-program-header {
+
+            position: relative;
+
+            @include flex-v-b-h-s( false );
+
+            width: calc( 100vw + 2rem );
+            height: 28rem;
+            margin: 0 4rem 0 0;
+            padding: 4rem calc( 10vw + 4rem ) 2rem 10vw;
+
+            @include fill( white, 0.965 );
+
+            background: {
+
+                size: cover;
+                position: center center;
+                repeat: no-repeat;
+
+            }
+
+            // overlay
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                @include fill( $cvnavy, 0.565 );
+
+            }
+
+            // title
+            .program-title {
+
+                position: relative;
+
+                z-index: 20;
+
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;
+
+                @include font( $klavislim, 3rem, 400 );
+
+                line-height: 4rem;
+
+                letter-spacing: 0.285em;
+
+                @include color( $cvellow, 0.000 );
+
+            }
+
+            // navigation
+            .program-navigation {
+
+                position: relative;
+
+                z-index: 20;
+
+                @include font( $klavislim, 1rem, 400 );
+
+                line-height: 1rem;
+
+                letter-spacing: 0.285em;
+
+                @include text( $up );
+
+                @include color( white, 0.000 );
+
+            }
+
+        }
+
+        // content
+        .degree-program-content {
+
+            width: calc( 100vw + 2rem );
+            height: auto;
+            min-height: calc( 100vh - 28rem );
+            // margin: 0 4rem 0 0;
+
+            @include color( $app10, 0.000 );
+
+        }
+
+        // content
+        .program-content {
+
+            width: 100%;
+            padding: 8rem 8rem 8rem 8rem;
+
+            // row
+            &.program-row {
+
+                // padding: 8rem 0 8rem 0;
+
+            }
+
+            // lite
+            &.lite {
+
+                @include color( $cvnavy, 0.165 );
+
+                @include fill( white, 0.000 );
+
+            }
+
+            // dark
+            &.dark {
+
+                @include color( white, 0.000 );
+
+                @include fill( $app05, 0.000 );
+
+            }
+
+            // description
+            &.description {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                // text
+                .description-text {
+
+                    @include flex-h-e-v-c( true );
+
+                    padding: 8rem 3rem 8rem 8rem;
+
+                    @include font( $klavika, 1.25rem, 400 );
+
+                    line-height: 2rem;
+
+                    letter-spacing: 0.065em;
+
+                }
+
+                // sidebar
+                .program-sidebar {
+
+                    @include flex-v-t-h-s( true );
+
+                    padding: 8rem 8rem 8rem 3rem;
+
+                    // title
+                    .degree-type-label {
+
+                        @include flex-h-s-v-c( true );
+
+                        height: 0.75rem;
+                        margin: 0 0 0.5rem 0;
+
+                        @include font( $industry, 0.6875rem, 600 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.065em;
+
+                        @include text( $up );
+
+                        @include color( $blue, 0.000 );
+
+                    }
+
+                    // title
+                    .degree-type-text {
+
+                        @include flex-h-s-v-c( true );
+
+                        height: 1rem;
+                        margin: 0 0 1rem 0;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.165em;
+
+                        @include text( $up );
+
+                        @include color( $cvnavy, 0.225 );
+
+                    }
+
+                    // button
+                    .degree-document-button {
+
+                        position: relative;
+
+                        @include flex-h-s-v-c( true );
+
+                        min-width: 16rem;
+                        height: 3rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0.1875rem 3rem 0 1.25rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.265em;
+
+                        @include text( $up );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( $cvnavy, 0.095 );
+
+                        transition: $all220;
+
+                        // last child
+                        &:last-child {
+
+                            margin: 0 0 0 0;
+
+                        }
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $roarange, 0.000 );
+
+                        }
+
+                        // after
+                        &:after {
+
+                            @include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
+
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+
+                            z-index: 10;
+
+                            @include color( white, 0.375 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // video
+            &.video {
+
+                @include flex-h-j-v-s( false );
+
+                background: {
+
+                    image: url(../img/content/content.background.00.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: top right;
+
+                }
+
+                // video container
+                .video-container {
+
+                    width: 60%;
+
+                    // video
+                    .program-video {
+
+                        position: relative;
+
+                        padding: 56.25% 0 0 0;
+
+                        // iframe
+                        iframe {
+
+                            position: absolute;
+
+                            top: 0;
+                            left: 0;
+
+                            width: 100%;
+                            height: 100%;
+
+                        }
+
+                    }
+
+                }
+
+                // text
+                .video-text {
+
+                    @include flex-v-b-h-s( true );
+
+                    width: 40%;
+                    padding: 0 0 0 3rem;
+
+                    letter-spacing: 0.035em;
+
+                    @include text( $up );
+
+                    @include color( $app90, 0.000 );
+
+                    // type
+                    .program-type {
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 2rem;
+
+                        letter-spacing: 0.265em;
+
+                    }
+
+                    // name
+                    .program-name {
+
+                        margin: 0 0 0 -0.125rem;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        line-height: 3rem;
+
+                    }
+
+                    // subtext
+                    .program-subtext {
+
+                        @include font( $vitesse, 0.75rem, 600 );
+
+                        line-height: 1rem;
+
+                    }
+
+                }
+
+
+            }
+
+            // facts
+            &.facts {
+
+                position: relative;
+
+                @include flex-h-j-v-s( false );
+
+                padding: 10rem 10vw 10rem 10vw;
+
+                @include fill( $cvnavy, 0.00 );
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 0;
+
+                    background: {
+
+                        image: url(../img/patterns/pattern.horizontal.svg);
+                        repeat: no-repeat;
+                        size: 120%;
+                        position: 0 -8rem;
+
+                    }
+
+                    opacity: 0.275;
+
+                    mix-blend-mode: overlay;
+
+                }
+
+                // title
+                .facts-title {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include flex-h-e-v-t( true );
+
+                    width: 40%;
+                    margin: 0 0 0 0;
+                    padding: 0 3rem 0 0;
+
+                    border-right: 1px solid transparentize( white, 0.465 );
+
+                    // title
+                    .title {
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        line-height: 2.5rem;
+
+                        letter-spacing: 0.075em;
+
+                        @include color( $blue, 0.000 );
+
+                    }
+
+                }
+
+                // title
+                .facts-content {
+
+                    position: relative;
+
+                    z-index: 10;
+
+                    @include flex-h-s-v-t( true );
+
+                    width: 60%;
+                    margin: 0 0 0 0;
+                    padding: 0 0 0 3rem;
+
+                    // list
+                    .list {
+
+                        margin: 0 0 0 0;
+
+                        list-style: none;
+
+                        // item
+                        li {
+
+                            margin: 0 0 2rem 0;
+
+                            @include font( $industry, 0.875rem, 500 );
+
+                            line-height: 1.25rem;
+
+                            letter-spacing: 0.035em;
+
+                            @include color( white, 0.000 );
+
+                            // last child
+                            &:last-child {
+
+                                margin-bottom: 0;
+
+                            }
+
+                            // highlight
+                            .highlight {
+
+                                @include flex-h-s-v-c( false );
+
+                                margin: 0 0 0.5rem 0;
+
+                                @include font( $klavislim, 1.25rem, 400 );
+
+                                line-height: 1rem;
+
+                                letter-spacing: 0.075em;
+
+                                @include text( $up );
+
+                                @include color( $cvellow, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // documents
+            &.documents {
+
+                @include flex-h-s-v-c( false );
+                @include flex-v-t-h-s( true );
+
+                // button
+                .document-button {
+
+                    position: relative;
+
+                    @include flex-h-s-v-c( true );
+
+                    min-width: 16rem;
+                    height: 3rem;
+                    margin: 0 1rem 1rem 0;
+                    padding: 0.1875rem 3rem 0 1.25rem;
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    line-height: 0.75rem;
+
+                    letter-spacing: 0.265em;
+
+                    @include text( $up );
+
+                    @include fill( $roarange, 0.000 );
+
+                    @include color( white, 0.000 );
+
+                    transition: $all220;
+
+                    // last child
+                    &:last-child {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $gold, 0.000 );
+
+                    }
+
+                    // after
+                    &:after {
+
+                        @include codicon( 3rem, 3rem, 1rem, 1rem, white, '\EF3E' );
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+
+                        z-index: 10;
+
+                        // margin: 0 0.5rem 0.125rem 0;
+
+                    }
+
+                }
+
+            }
+
+            // concentrations
+            &.concentrations {
+
+                @include flex-v-c-h-st( false );
+
+                // title
+                .title {
+
+                    @include flex-h-c-v-c( false );
+
+                    margin: 0 0 4rem 0;
+
+                    @include font( $klavislim, 2.5rem, 400 );
+
+                    letter-spacing: 0.075em;
+
+                    @include color( $blue, 0.000 );
+
+                }
+
+                // content
+                .concentrations-content {
+
+                    @include flex-h-j-v-s( false );
+
+                    // button
+                    .concentration-button {
+
+                        position: relative;
+
+                        @include flex-v-c-h-st( false );
+
+                        // flex-grow: -1;
+                        flex-basis: calc( 50% - 2rem );
+
+                        min-height: 18rem;
+                        margin: 0 0 0 0;
+                        padding: 6rem 2rem 4rem 2rem;
+
+                        border-bottom: 2px solid $cvellow;
+
+                        @include color( $g140, 0.000 );
+
+                        @include fill( $neutral, 0.665 );
+                        // @include fill( $cvellow, 0.865 );
+
+                        // common
+                        .button-title,
+                        .button-text {
+
+                            position: relative;
+
+                            z-index: 10;
+
+                        }
+
+                        // title
+                        .button-title {
+
+                            @include flex-h-s-v-b( false );
+
+                            margin: 0 0 1rem 0;
+
+                            @include font( $klavislim, 1.25rem, 400 );
+
+                            line-height: 1rem;
+
+                            letter-spacing: 0.075em;
+
+                            @include text( $up, left );
+
+                            @include color( $g140, 0.000 );
+
+                        }
+
+                        // text
+                        .button-text {
+
+                            @include flex-h-s-v-b( false );
+
+                            @include font( $industry, 0.75rem, 600 );
+
+                            line-height: 1rem;
+
+                            @include text( inherit, left);
+
+                            @include color( $app05, 0.185 );
+
+                        }
+
+                        // button
+                        .button-button {
+
+                            position: absolute;
+
+                            right: 0;
+                            bottom: 0;
+
+                            z-index: 10;
+
+                            @include flex-h-e-v-c( false );
+
+                            height: 3rem;
+                            margin: 1.5rem 0 0 0;
+                            padding: 0.125rem 2.5rem 0 1.25rem;
+
+                            @include font( $klavislim, 0.75rem, 500 );
+
+                            line-height: 0.875rem;
+
+                            letter-spacing: 0.265em;
+
+                            @include text( $up );
+
+                            @include color( $g140, 0.000 );
+
+                            transition: $all220;
+
+                            // hover state
+                            &:hover {
+
+                                // @include fill( $g140, 0.000 );
+
+                            }
+
+                            // after
+                            &:after {
+
+                                @include codicon( 2.75rem, 3rem, 1rem 0.75rem 1rem 1rem, 0.75rem, $cvellow, '\EDD6' );
+
+                                position: absolute;
+
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+
+                                z-index: 10;
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // careers
+            &.careers {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include fill( $neutral, 0.000 );
+
+                // text
+                .careers-text {
+
+                    @include flex-v-t-h-e( false );
+
+                    flex-basis: 40%;
+
+                    margin: 0;
+                    padding: 8rem 4rem 16rem 10vw;
+
+                    @include fill( $blue, 0.000 );
+
+                    // title
+                    .careers-title {
+
+                        @include font( $klavislim, 2.5rem, 400 );
+
+                        line-height: 3rem;
+
+                        letter-spacing: 0.075em;
+
+                        @include text( $up, right );
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                    // text
+                    .careers-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include text( inherit, right );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                }
+
+                // list
+                .careers-list {
+
+                    @include flex-h-s-v-t( false );
+
+                    align-content: flex-start;
+                    flex-wrap: wrap;
+                    flex-basis: 60%;
+
+                    padding: 8rem 10vw 8rem 4rem;
+
+                    @include fill( $blue, 0.385 );
+
+                    // item
+                    .item {
+
+                        @include flex-h-s-v-c( true );
+
+                        flex-basis: 50%;
+
+                        height: 2rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0 1rem 0 0;
+
+                        @include font( $industry, 1rem, 600 );
+
+                        line-height: 0.75rem;
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+            }
+
+            // employers
+            &.employers {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include fill( $neutral, 0.000 );
+
+                // text
+                .employers-text {
+
+                    @include flex-v-t-h-s( false );
+
+                    flex-basis: 40%;
+
+                    margin: 0;
+                    padding: 8rem 10vw 16rem 4rem;
+
+                    @include fill( $neutral, 0.000 );
+
+                    // title
+                    .employers-title {
+
+                        @include font( $klavislim, 2.5rem, 400 );
+
+                        line-height: 3rem;
+
+                        letter-spacing: 0.075em;
+
+                        @include text( $up, left );
+
+                        @include color( $g140, 0.000 );
+
+                    }
+
+                    // text
+                    .employers-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include text( inherit, left );
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+                // list
+                .employers-list {
+
+                    @include flex-h-e-v-t( true );
+
+                    align-content: flex-start;
+                    flex-wrap: wrap;
+                    flex-basis: 60%;
+
+                    padding: 8rem 10vw 8rem 4rem;
+
+                    @include fill( white, 0.265 );
+
+                    // item
+                    .item {
+
+                        @include flex-h-e-v-c( true );
+
+                        flex-basis: 50%;
+
+                        height: 2rem;
+                        margin: 0 0 1rem 0;
+                        padding: 0 1rem 0 0;
+
+                        @include font( $industry, 1rem, 600 );
+
+                        line-height: 0.75rem;
+
+                        @include text( inherit, right );
+
+                        @include color( $app05, 0.165 );
+
+                    }
+
+                }
+
+            }
+
+            // organziations
+            &.organizations {
+
+                @include flex-v-c-h-c( false );
+
+                // title
+                .title {
+
+                    @include font( $klavislim, 2.5rem, 400 );
+
+                    line-height: 4rem;
+
+                    letter-spacing: 0.075em;
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // row
+                .buttons {
+
+                    @include flex-h-c-v-c( false );
+
+                    width: 100%;
+
+                }
+
+                // button
+                .organization-button {
+
+                    @include flex-h-c-v-c( true );
+
+                    height: 3rem;
+                    margin: 0 1rem 0 0;
+                    padding: 0.125rem 1.25rem 0 1.25rem;
+
+                    border: 1px solid white;
+
+                    @include font( $klavislim, 0.875rem, 400 );
+
+                    line-height: 0.75rem;
+
+                    letter-spacing: 0.135em;
+
+                    @include text( $up );
+
+                    @include color( white, 0.000 );
+
+                    transition: $all220;
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $roarange, 0.000 );
+
+                    }
+
+                    // last child
+                    &:last-child {
+
+                        margin: 0 0 0 0;
+
+                    }
+
+                }
+
+            }
+
+            // minors
+            &.minors {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 0;
+
+                @include color( $app05, 0.185 );
+
+                @include fill( $neutral, 0.000 );
+
+                // content
+                .content {
+
+                    @include flex-v-c-h-s( true );
+
+                    flex-basis: 50%;
+
+                    margin: 8rem 0 8rem 0;
+                    padding: 8rem 10vw 8rem 6rem;
+
+                    // text
+                    .minor-description {
+
+                        @include font( $industry, 0.875rem, 600 );
+
+                        line-height: 1.5rem;
+
+                        letter-spacing: 0.035em;
+
+                        @include color( $app05, 0.215 );
+
+                    }
+
+                    // button
+                    .minor-link-button {
+
+                        @include flex-h-c-v-c( false );
+
+                        height: 4rem;
+                        margin: 2rem 0 0 0;
+                        padding: 0.125rem 1.5rem 0 1.5rem;
+
+                        // border: 1px solid transparentize( $app05, 0.125 );
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        line-height: 0.75rem;
+
+                        letter-spacing: 0.265em;
+
+                        @include text( $up );
+
+                        // @include color( $app05, 0.125 );
+                        @include color( white, 0.000 );
+
+                        @include fill( $roarange, 0.000 );
+
+                        transition: $all220;
+
+                    }
+
+                }
+
+                // design
+                .design-block {
+
+                    @include flex-h-c-v-c( true );
+
+                    flex-basis: 50%;
+
+                    @include fill( $blue, 0.000 );
+
+                    // image
+                    .artwork {
+
+                        width: 100%;
+                        height: 100%;
+
+                        background: {
+
+                            repeat: no-repeat;
+                            size: cover;
+                            position: center center;
+
+                        }
+
+                        opacity: 0.365;
+
+                    }
+
+                }
+
+            }
+
+            // similar majors
+            &.similar {
+
+                @include flex-h-j-v-s( false );
+
+                padding: 0 0 0 10vw;
+
+                @include color( white, 0.000 );
+
+                @include fill( $cvnavy, 0.000 );
+
+                // title
+                .title {
+
+                    @include flex-v-c-h-e( true );
+
+                    flex-basis: 30%;
+
+                    margin: 12rem 0 12rem 0;
+                    padding: 0 4rem 0 0;
+
+                    @include color( $cvellow, 0.000 );
+
+                }
+
+                // button
+                .buttons {
+
+                    @include flex-h-j-v-s( true );
+
+                    flex-basis: 70%;
+
+                    // button
+                    .similar-major-link {
+
+                        @include flex-v-c-h-c( true );
+
+                        flex-basis: 33.333333%;
+                        flex-grow: 0;
+
+                        padding: 2rem 2rem 2rem 2rem;
+
+                        @include font( $klavislim, 1rem, 400 );
+
+                        letter-spacing: 0.235em;
+
+                        @include text( $up, center );
+
+                        @include color( white, 0.000 );
+
+                        @include fill( white, 0.965 );
+
+                        transition: $all220;
+
+                        // 01
+                        &:nth-of-type( 1 ) {
+
+                            @include fill( white, 0.985 );
+
+                        }
+
+                        // 02
+                        &:nth-of-type( 2 ) {
+
+                            @include fill( white, 0.955 );
+
+                        }
+
+                        // 03
+                        &:nth-of-type( 3 ) {
+
+                            @include fill( white, 0.925 );
+
+                        }
+
+                        // hover state
+                        &:hover {
+
+                            @include fill( $roarange, 0.000 );
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // research opportunties
+            &.research {
+
+                padding: 0 0 0 0;
+
+                // wrapper
+                .content-wrapper {
+
+                    @include flex-h-j-v-s( false );
+
+                }
+
+                // title
+                .title {
+
+                    @include typo( 3rem, 0.075em );
+
+                }
+
+                // content
+                .content {
+
+                    // left
+                    &.left {
+
+                        @include flex-v-c-h-s( true );
+
+                        width: 40%;
+                        padding: 8rem 4rem 8rem 8rem;
+
+                        @include fill( $beige, 0.565 );
+
+                        // content
+                        .content {
+
+                            @include font( $industry, 0.875rem, 600 );
+
+                            @include color( $app05, 0.000 );
+
+                        }
+
+                    }
+
+                    // right
+                    &.right {
+
+                        position: relative;
+
+                        @include flex-v-c-h-st( true );
+
+                        width: 60%;
+                        padding: 8rem 8rem 8rem 4rem;
+
+                        // list
+                        .research-opportunity {
+
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+
+                            z-index: 10;
+
+                            @include flex-v-b-h-s( false );
+
+                            width: 100%;
+                            height: 100%;
+                            padding: 8rem 8rem 8rem 4rem;
+
+                            background: {
+
+                                repeat: no-repeat;
+                                size: cover;
+                                position: center center;
+
+                            }
+
+                            // contact
+                            .contact-box {
+
+                                position: absolute;
+
+                                bottom: 4rem;
+                                left: 0;
+
+                                z-index: 10;
+
+                                padding: 2rem 2rem 2rem 2rem;
+
+                                @include fill( $blue, 0.125 );
+
+                                @include color( white, 0.000 );
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // contacts
+            &.contacts {
+
+                // @include fill( $blue, 0.000 );
+
+                // title
+                .title {
+
+                    @include color( white, 0.000 );
+
+                }
+
+                // list
+                .contact-list {
+
+                    @include flex-h-s-v-st( false );
+
+                    margin: 0;
+
+                    list-style: none;
+
+                    // card
+                    .contact-card {
+
+                        width: 20rem;
+                        padding: 2rem;
+
+                        color: white;
+
+                        @include fill( white, 0.965 );
+
+                        img {
+
+                            width: 16rem;
+                            margin: 0 0 1rem 0;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+            // tuition + financail aid
+            &.tuition {
+
+                position: relative;
+
+                @include flex-h-e-v-c( false );
+
+                padding: 12rem 8rem 12rem 8rem;
+
+                @include fill( $beige, 0.000 );
+
+                background: {
+
+                    image: url(../img/content/content.background.06.jpg);
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include fill( $beige, 0.565 );
+
+                }
+
+                // wrapper
+                .content-wrapper {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include flex-v-j-h-e( false );
+
+                    width: 50%;
+
+                }
+
+                // title
+                .title {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    // @include flex-h-c-v-c( false );
+
+                    // width: 100%;
+
+                    @include color( $g140, 0.000 );
+
+                }
+
+                // content
+                .content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include typo( 1.5rem, 0.045em );
+
+                    @include color( $app05, 0.000 );
+
+                }
+
+                // button
+                .content-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 2rem 0 0 0;
+                    padding: 0.0625rem 1rem 0 1rem;
+
+                    border: 1px solid $g140;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 0.5rem, 0.065em );
+
+                    @include text( $up );
+
+                    @include color( $g140, 0.000 );
+
+                }
+
+            }
+
+            // location
+            &.location {
+
+                position: relative;
+
+                background: {
+
+                    repeat: no-repeat;
+                    size: cover;
+                    position: center center;
+
+                }
+
+                // after
+                &:after {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include fill( $app05, 0.565 );
+
+                }
+
+                // wrapper
+                .content-wrapper {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include flex-v-j-h-s( false );
+
+                    width: 50%;
+
+                }
+
+                // title
+                .title {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    // @include flex-h-c-v-c( false );
+
+                    width: 100%;
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+                // content
+                .content {
+
+                    position: relative;
+
+                    z-index: 20;
+
+                    @include typo( 1.5rem, 0.045em );
+
+                }
+
+                // button
+                .content-button {
+
+                    @include flex-h-c-v-c( false );
+
+                    height: 3rem;
+                    margin: 2rem 0 0 0;
+                    padding: 0.0625rem 1rem 0 1rem;
+
+                    border: 1px solid $gold;
+
+                    @include font( $industry, 0.75rem, 600 );
+
+                    @include typo( 0.5rem, 0.065em );
+
+                    @include text( $up );
+
+                    color: white;
+
+                }
+
+            }
+
+            // last child
+            &:last-child {
+
+                // output
+                .content-output {
+
+                    margin-bottom: 0;
+
+                }
+
+            }
+
+            // title
+            .title {
+
+                @include font( $klavislim, 2.5rem, 400 );
+
+                line-height: 4rem;
+
+                letter-spacing: 0.075em;
+
+                @include color( $blue, 0.000 );
+
+            }
+
+        }
+
+    }

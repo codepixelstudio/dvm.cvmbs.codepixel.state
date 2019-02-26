@@ -1,0 +1,154 @@
+// stylesheet :: academics section layout + content styles
+
+    // settings
+    $research_fx : all 320ms $oquin 0ms;
+    $section_color : transparentize( $cvnavy, 0.145 );
+
+    $billboard : '../img/billboards/sections/research/research.map.01.svg';
+
+    // styles
+    #research {
+
+        // container
+        .article-container {
+
+            height: 100vh;
+
+        }
+
+        // color base
+        .section-base {
+
+            @include fill( $section_color, 0.000 );
+
+        }
+
+        // title
+        .section-title {
+
+            padding: 1.125rem 1.5rem 1rem 1.5rem;
+
+            @include font( $klavislim, 1.5rem, 400 );
+
+            color: $gold;
+
+            @include fill( $cvnavy, 0.245 );
+
+        }
+
+        // content
+        .section-content {
+
+            height: 100vh;
+            padding: 1rem 1rem 1rem 1rem;
+
+        }
+
+        // design
+        .design-layer {
+
+            // fx.layers
+            .fx-layer {
+
+                @include fullscreen( absolute, 1, false, hidden );
+
+                // opacity: 0.000;
+
+            }
+
+            // color + gradient
+            .color-layer {
+
+
+
+            }
+
+            // pattern + artwork
+            .pattern-layer {
+
+                @include background( '', false, cover, center center );
+
+            }
+
+        }
+
+        // map
+        #research-map {
+
+            position: absolute;
+
+            top: -3.5rem;
+            right: -3.5rem;
+            bottom: -3.5rem;
+            left: -3.5rem;
+
+            z-index: 20;
+
+            width: calc( 100vw + 7rem );
+            height: calc( 100vh + 7rem );
+
+            @include fill( red, 0.725 );
+
+            opacity: 0.645;
+
+            // after
+            &:after {
+
+                content: '';
+
+                position: absolute;
+
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+
+                z-index: 10;
+
+                @include fill( $cvnavy, 0.465 );
+
+                mix-blend-mode: overlay;
+
+            }
+
+        }
+
+        // map toolbar
+        #research-map-toolbar {
+
+            position: absolute;
+
+            top: 5rem;
+            right: 5rem;
+            bottom: 0;
+            left: 5rem;
+
+            z-index: 50;
+
+            @include flex-h-j-v-c( false );
+
+            width: calc( 100vw - 10rem );
+            height: 5rem;
+            margin: 0;
+            padding: 1.125rem 1rem 1rem 1.25rem;
+
+            @include fill( $cvnavy, 0.145 );
+
+            @include hide;
+
+        }
+
+        // toolbar title
+        .toolbar-title {
+
+            @include font( $klavislim, 1rem, 400 );
+
+            line-height: 1rem;
+
+            letter-spacing: 0.105em;
+
+            color: $gold;
+
+        }
+
+    }
