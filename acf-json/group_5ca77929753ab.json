@@ -1053,16 +1053,35 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "field_5cc0796bedb32",
+                            "collapsed": "field_5cc0b0ed79af0",
                             "min": 0,
                             "max": 0,
-                            "layout": "table",
+                            "layout": "row",
                             "button_label": "Add Styled List Item",
                             "sub_fields": [
                                 {
+                                    "key": "field_5cc0b0ed79af0",
+                                    "label": "List Item Title",
+                                    "name": "list_item_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
                                     "key": "field_5cc0796bedb32",
-                                    "label": "Styled List Item",
-                                    "name": "styled_list_item",
+                                    "label": "List Item Content",
+                                    "name": "list_item_content",
                                     "type": "textarea",
                                     "instructions": "",
                                     "required": 0,
@@ -1203,12 +1222,29 @@
                             "button_label": "Add Timeline Entry",
                             "sub_fields": [
                                 {
+                                    "key": "field_5cc0b95f3ae5a",
+                                    "label": "Entry Date",
+                                    "name": "entry_date",
+                                    "type": "date_picker",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "display_format": "F j, Y",
+                                    "return_format": "Ymd",
+                                    "first_day": 1
+                                },
+                                {
                                     "key": "field_5cc083e6f6033",
                                     "label": "Entry Title",
                                     "name": "entry_title",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -1227,7 +1263,7 @@
                                     "name": "entry_content",
                                     "type": "wysiwyg",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -1271,5 +1307,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556120772
+    "modified": 1556134354
 }

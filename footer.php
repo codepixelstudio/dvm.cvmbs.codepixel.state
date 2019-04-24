@@ -322,6 +322,16 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeLfPHr4SEYg0sGxkP-3_xWF4FiD5vHI&callback=cartographer" async defer>
         </script>
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138956035-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-138956035-1');
+        </script>
+
         </body>
 
     </html>

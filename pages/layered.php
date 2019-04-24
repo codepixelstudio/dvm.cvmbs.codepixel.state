@@ -80,6 +80,14 @@
 
                             get_template_part( 'elements/blocks/block.content.image' );
 
+                        elseif ( get_row_layout() == 'timeline' ) :
+
+                            get_template_part( 'elements/blocks/block.timeline' );
+
+                        elseif ( get_row_layout() == 'styled_list' ) :
+
+                            get_template_part( 'elements/blocks/block.styled.list' );
+
                         else:
 
                             // no blocks found
