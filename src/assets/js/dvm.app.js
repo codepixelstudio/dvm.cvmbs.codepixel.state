@@ -5,8 +5,9 @@
 
     // import modules
     import $ from 'jquery';
-    // import whatInput from 'what-input';
+    import whatInput from 'what-input';
     import { menusFX } from './components/menus.ui';
+    import { dataUI } from './data/data.directory';
     import './library/foundation.explicit';
 
     // global jQuery object
@@ -138,6 +139,9 @@
         // menus
         menusFX.init();
 
+        // directory
+        // dataUI.init();
+
         // display content
         site.ui.layout.velocity( 'fadeIn', {
 
@@ -153,23 +157,15 @@
 
         });
 
+        console.log( $(window.screen) );
+
     });
 
     // menu variables
     var globalnav = $('#global-menu-link');
-    var localmenu = $('#menu-department-menu, #menu-special-unit-menu');
+    var localmenu = $('#menu-panel-main-menu .accordion-menu');
 
-    // test for local menu
-    if ( localmenu.length > 0 ) {
-
-        // append global menu link
-        $( globalnav ).appendTo( $( localmenu ) );
-
-    } else {
-
-        globalnav.remove();
-
-    }
+    $( globalnav ).appendTo( $( localmenu ) );
 
 // ================================================================================
 // END :: initialize
@@ -182,17 +178,19 @@
 // ================================================================================
 
     // variables
-    var scrollcontrol = $('#site-toolbar .menu-item-link, #special-billboard .explore-button');
+    var toolbarloader  = $('#explore-button');
+    var programtoolbar = $('#homepage-toolbar');
+    var scrollvalue;
 
     // event handler
-    scrollcontrol.on( 'click', function( e ) {
+    toolbarloader.on( 'click', function( e ) {
 
-        // data attribute
-        var scrollsection = $(this).data( 'section-link' );
+        var scrollsection = $(this).data( 'panel-link' );
         var scrolltarget  = $('#' + scrollsection );
 
-        // test
         console.log( scrolltarget );
+
+        // scrollvalue = $(window).scrollTop();
 
         scrolltarget.velocity( 'scroll', {
 
@@ -202,20 +200,51 @@
 
             },
             container : site.ui.layout,
-            duration  : 640,
-            delay     : 60,
+            duration  : 360,
+            delay     : 20,
             easing    : [0.023, 1, 0.32, 1],
             complete  : function() {
 
-                // $(this).focus().toggleClass( 'active' );
-
-                // site.ui.content.trigger( 'activate.ui.article', [ target ] );
+                programtoolbar.toggleClass( 'active inactive' );
 
             }
 
         });
 
     });
+
+    // scroll test
+    var scrollcheck = $('#toolbar-button');
+
+    // event handler
+    scrollcheck.on( 'click', function( e ) {
+
+
+
+    });
+
+    if ( $('.cvmbs-accordions').length > 0 ) {
+        $('.cvmbs-accordion').each(function() {
+            $(this).addClass('has-loaded');
+        });
+
+        $('.cvmbs-accordion__title').each(function() {
+            var accordionTitle = $(this).html();
+
+            $(this).html('<button class="cvmbs-accordion__toggle" aria-expanded="false">' + accordionTitle + '</button>');
+        });
+
+        $('.cvmbs-accordion__content').each(function() {
+            $(this).attr('aria-hidden', 'true');
+        });
+
+        $('.cvmbs-accordion__toggle').click(function() {
+            $(this).attr('aria-expanded', function(i, attr) {
+                $(this).parent().next().attr('aria-hidden', attr);
+                return attr == 'true' ? 'false' : 'true';
+            });
+        });
+    };
 
 // ================================================================================
 // END :: prototype DVM build

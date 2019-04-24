@@ -47,13 +47,8 @@
 
         <?php
 
-            if ( $site_type == 'college' ) {
+            echo '
 
-                //
-
-            } elseif ( $site_type == 'department' || $site_type == 'special' ) {
-
-                echo '
                 <!-- global.menu -->
                 <li id="global-menu-link">
 
@@ -67,8 +62,6 @@
 
                 </li>
                 <!-- END global.menu -->';
-
-            }
 
         ?>
 

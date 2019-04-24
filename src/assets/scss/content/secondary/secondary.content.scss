@@ -1,222 +1,48 @@
-// stylesheet :: homepage layout + content styles
+// stylesheet :: secondary page layout + content styles
 
     // settings
-    $content_width  : 80vw;
-    $content_width_ex : calc( 100vw + 4rem );
-    $content_height : 100vh;
+    $content : 1rem;
+    $page : #FBF8EF;
 
     // styles
-    #secondary-content {
+    #site-layout.secondary {
 
-        width: $content_width;
-        height: auto;
+        position: static;
+
+        width: 100%;
         min-height: 100vh;
-        margin: 0 10vw 0 10vw;
-        padding: 2rem 2rem 2rem 2rem;
 
-        @include fill( white, 0.000 );
+    }
 
-        // focus state
-        &:focus {
+    // content
+    #content-container {
 
-            // outline: none;
+        position: relative;
 
-        }
+        @include flex-v-t-h-st( false );
 
-        // menu open state
-        .site-menu-open & {
+        min-height: 100vh;
+        padding: 18rem 0 0 0;
 
-            opacity: 0.325;
+        @include fill( $page, 0.000 );
 
-        }
+    }
 
-        // container
-        .secondary-container {
+    // page header
+    .page-header {
 
-            @include flex-h-j-v-t( false );
+        
 
-        }
+    }
 
-        // main content
-        .main-content-area {
+    // page content
+    .page-content {
 
-            @include flex-v-t-h-s( true );
+        @include flex-h-s-v-t( false );
 
-            width: 70%;
-            margin: 0;
-            padding: 0 2rem 0 0;
+        height: auto;
+        padding: 3rem 12vh 3rem 12vh;
 
-            color: $admin;
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                width: 100%;
-                padding: 0;
-
-            }
-
-            // title
-            .page-title {
-
-                color: $g135;
-
-            }
-
-            // text
-            p {
-
-                @include font( $industry, 0.8125rem, 500 );
-
-                line-height: 1.375rem;
-
-            }
-
-        }
-
-        // sidebar
-        .main-content-sidebar {
-
-            width: 30%;
-            margin: 0;
-            padding: 0;
-
-            color: $admin;
-
-            @include fill( $beige, 0.000 );
-
-            // mobile
-            @include breakpoint ( small only ) {
-
-                @include hide;
-
-            }
-
-            // title
-            .sidebar-title {
-
-                height: 2rem;
-                margin: 0 0 0 0;
-                padding: 0.0625rem 1rem 0 0.75rem;
-
-                @include font( $klavislim, 0.875rem, 500 );
-
-                line-height: 2rem;
-
-                letter-spacing: 0.065em;
-
-                color: white;
-
-                @include fill( $g135, 0.000 );
-
-                // highlight
-                em {
-
-                    font-style: normal;
-
-                    color: $gold;
-
-                }
-
-            }
-
-            // text
-            p {
-
-                margin: 1rem 1rem 1rem 1rem;
-
-                @include font( $industry, 0.75rem, 600 );
-
-            }
-
-            // widget class hook
-            .widget {
-
-                // menus
-                .menu {
-
-                    // menu item
-                    .menu-item {
-
-                        @include flex-h-s-v-c( false );
-
-                        width: 100%;
-                        height: 2rem;
-                        margin: 0;
-                        padding: 0;
-
-                        // current state
-                        &.current-menu-item {
-
-                            // link
-                            a {
-
-                                @include color( white, 0.000 );
-
-                                @include fill( $blue, 0.000 );
-
-                            }
-
-                        }
-
-                        // link
-                        a {
-
-                            @include flex-h-s-v-c( false );
-
-                            width: 100%;
-                            height: 2rem;
-                            padding: 0 1rem 0 0.75rem;
-
-                            @include font( $klavislim, 0.875rem, 500 );
-
-                            line-height: 0.625rem;
-
-                            letter-spacing: 0.065em;
-
-                            @include text( $up );
-
-                            color: $g135;
-                            // color: white;
-
-                            transition: all 160ms linear 0ms;
-
-                            // hover state
-                            &:hover {
-
-                                @include color( white, 0.000 );
-
-                                @include fill( $orange, 0.000 );
-
-                            }
-
-                        }
-
-                    }
-
-                }
-
-                // video
-                &.widget_media_video {
-
-                    // play button
-                    .mejs-overlay-button {
-
-                        opacity: 0.000 !important;
-
-                    }
-
-                    // controls
-                    .mejs-controls {
-
-                        display: none !important;
-
-                    }
-
-                }
-
-            }
-
-        }
+        @include color( $app05, 0.000 );
 
     }

@@ -1,0 +1,80 @@
+// stylesheet :: contact panel styles
+
+    // settings
+    $contact : 1rem;
+
+    // styles
+    #panel-contact {
+
+        min-height: 100vh;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.06.jpg);
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $beige, 0.385 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include color( $g140, 0.000 );
+
+        }
+
+        // buttons
+        .button-group {
+
+            @include flex-h-j-v-t( false );
+
+            flex-wrap: wrap;
+
+            width: 100%;
+            padding: 0 4rem 0 4rem;
+
+            .contact-button {
+
+                @include flex-v-b-h-s( true );
+
+                width: calc( 25% - 2rem );
+                height: 10rem;
+                margin: 1rem 1rem 1rem 1rem;
+                padding: 0 1rem 1rem 1rem;
+
+                @include fill( $g135, 0.125 );
+
+                @include shadowbox( 1rem, 3rem, black, 0.215 );
+
+                transition: all 220ms linear 0ms;
+
+                // hover state
+                &:hover {
+
+                    @include fill( $dark, 0.125 );
+
+                }
+
+                // text
+                span {
+
+                    @include font( $klavislim, 1rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 1rem, 0.045em );
+
+                    @include color( $gold, 0.000 );
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1,4 +1,4 @@
-// stylesheet :: cvmbs.ui stylesheets compiler
+// stylesheet :: dvm.ui stylesheets compiler
 
     // variables + helpers
     @import 'utilities/utilities';
@@ -36,14 +36,8 @@
     // ui FX
     @import 'ui.fx/ui.fx';
 
-    // elementor
-    @import 'elementor/elementor';
-
     // pages
     @import 'pages/pages';
-
-    // department
-    @import 'department/department';
 
     // special
     @import 'special/special';

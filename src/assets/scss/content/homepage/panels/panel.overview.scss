@@ -1,0 +1,96 @@
+// stylesheet :: overview panel styles
+
+    // settings
+    $overview : 1rem;
+
+    // styles
+    #panel-overview {
+
+        z-index: 100;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.02.jpg);
+
+        }
+
+        // overlay
+        .panel-overlay {
+
+            @include fill( $cvnavy, 0.215 );
+
+        }
+
+        // content
+        .panel-content {
+
+            @include flex-h-j-v-s( false );
+
+            height: 100%;
+
+            // text
+            .text {
+
+                @include flex-v-b-h-s( false );
+
+                width: 30vw;
+                padding: 0 2rem 5rem 5rem;
+
+                // @include fill( white, 0.965 );
+
+                // heading
+                h3 {
+
+                    @include font( $klavislim, 1.75rem, 500 );
+
+                    @include typo( 2rem, 0.045em );
+
+                    @include color( $cvellow, 0.000 );
+
+                }
+
+                // text
+                p {
+
+                    @include font( $industry, 0.875rem, 500 );
+
+                    @include typo( 1.25rem, 0.035em );
+
+                    // last child
+                    &:last-child {
+
+                        margin-bottom: 0;
+
+                    }
+
+                }
+
+            }
+
+            // callouts
+            .callouts {
+
+                @include flex-h-j-v-b( false );
+
+                width: 70vw;
+                padding: 0 5rem 5rem 0;
+
+                // blocks
+                .callout-block {
+
+                    flex-basis: 33.3333333%;
+
+                    height: 12rem;
+                    margin: 0 0 0 2rem;
+
+                    @include fill( $cvnavy, 0.165 );
+
+                    @include shadowbox( 1rem, 3rem, black, 0.315 );
+
+                }
+
+            }
+
+        }
+
+    }

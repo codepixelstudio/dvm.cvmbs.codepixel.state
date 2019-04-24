@@ -1,0 +1,112 @@
+{
+    "key": "group_5c75c639e8a7e",
+    "title": "Homepage Panels",
+    "fields": [
+        {
+            "key": "field_5c881778f00ca",
+            "label": "Content Panel Blocks",
+            "name": "content_panel_blocks",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5c88177e75691": {
+                    "key": "5c88177e75691",
+                    "name": "statistical_highlights",
+                    "label": "Statistical Highlights",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c88185af00cb",
+                            "label": "Highlights",
+                            "name": "highlights",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 3,
+                            "layout": "row",
+                            "button_label": "Add Highlight",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5c8821fd22053",
+                                    "label": "Highlight Number",
+                                    "name": "highlight_number",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5c88220f22054",
+                                    "label": "Highlight Text",
+                                    "name": "highlight_text",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": "",
+                                    "rows": 6,
+                                    "new_lines": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": "3"
+                }
+            },
+            "button_label": "Add Panel Content",
+            "min": "",
+            "max": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "panel"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1552425515
+}

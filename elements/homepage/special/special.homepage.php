@@ -1,36 +1,130 @@
 <?php
 
-    $site_type  = get_field( 'site_type', 'options' );
-    $site_image = get_field( 'site_background', 'options' );
-    $site_layout = get_field( 'special_unit_layout', 'options' );
+    $billboard   = get_field( 'homepage_billboard', 'options' );
+    $billboard_image = $billboard[ 'image' ];
+    $billboard_title = $billboard[ 'headline' ];
+    $billboard_text  = $billboard[ 'text' ];
 
 ?>
 
 <!-- site.layout -->
-<main id="site-layout" class="off-canvas-content secondary <?php echo $site_type; ?>" data-off-canvas-content>
+<main id="site-layout" class="off-canvas-content secondary special" data-off-canvas-content>
 
     <!-- special.billboard -->
-    <section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $site_image; ?>);">
-    <!-- <section id="special-billboard" class="ui-billboard pattern" tabindex="-1"> -->
+    <section id="special-billboard" class="ui-billboard pattern" tabindex="-1" style="background-image:url(<?php echo $billboard_image[ 'url' ]; ?>);">
 
         <!-- overlay -->
         <div class="billboard-overlay">
 
-
+            <!--  -->
 
         </div>
         <!-- END overlay -->
 
         <!-- content -->
-        <div class="billboard-content">
+        <div id="billboard-container">
 
-            <?php
+            <!-- content -->
+            <div id="billboard-content">
 
-                $theme = wp_get_theme();
+                <!-- headline -->
+                <span class="headline">
 
-                echo $theme;
+                    <?php echo $billboard_title; ?>
 
-            ?>
+                </span>
+                <!-- END headline -->
+
+                <!-- text -->
+                <span class="text">
+
+                    <?php echo $billboard_text; ?>
+
+                </span>
+                <!-- END text -->
+
+                <!-- button -->
+                <button id="explore-button" class="link" data-panel-link="panel-overview">
+
+                    explore our program
+
+                </button>
+                <!-- END button -->
+
+            </div>
+            <!-- END content -->
+
+            <!-- buttons -->
+            <div id="billboard-buttons">
+
+                <!-- link -->
+                <a id="button-explore" class="button-link" href="#">
+
+                    <!-- title -->
+                    <span class="button-title">
+
+                        apply to our program
+
+                    </span>
+                    <!-- END title -->
+
+                    <!-- text -->
+                    <span class="button-text">
+
+                        descriptive text goes here and is followed<br />by lorem ipsum dolor sit amet
+
+                    </span>
+                    <!-- END text -->
+
+                </a>
+                <!-- END link -->
+
+                <!-- link -->
+                <a id="button-admissions" class="button-link" href="#">
+
+                    <!-- title -->
+                    <span class="button-title">
+
+                        admissions requirements
+
+                    </span>
+                    <!-- END title -->
+
+                    <!-- text -->
+                    <span class="button-text">
+
+                        another bit of descriptive text goes here<br />followed by lorem ipsum dolor sit amet
+
+                    </span>
+                    <!-- END text -->
+
+                </a>
+                <!-- END link -->
+
+                <!-- link -->
+                <a id="button-contact" class="button-link" href="#">
+
+                    <!-- title -->
+                    <span class="button-title">
+
+                        contact us
+
+                    </span>
+                    <!-- END title -->
+
+                    <!-- text -->
+                    <span class="button-text">
+
+                        still more descriptive text goes here<br />but longer now and followed by lorem ipsum
+
+                    </span>
+                    <!-- END text -->
+
+                </a>
+                <!-- END link -->
+
+            </div>
+            <!-- END buttons -->
 
         </div>
         <!-- END content -->
@@ -42,21 +136,73 @@
     <section id="special-content" class="homepage-content">
 
         <!-- content section -->
-        <div id="section-01" class="special-content-section">
+        <div id="panel-overview" class="special-content-section">
 
-            <?php
+            <?php get_template_part( 'elements/homepage/panels/panel.overview' ); ?>
 
-                if ( $site_layout == 'builder' ) {
+        </div>
+        <!-- END content section -->
 
-                    the_content();
+        <!-- content section -->
+        <div id="panel-video" class="special-content-section">
 
-                } elseif ( $site_layout == 'template' ) {
+            <?php get_template_part( 'elements/homepage/panels/panel.video' ); ?>
 
-                    echo 'template layout';
+        </div>
+        <!-- END content section -->
 
-                }
+        <!-- content section -->
+        <div id="panel-highlights" class="special-content-section">
 
-            ?>
+            <?php get_template_part( 'elements/homepage/panels/panel.highlights' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-curriculum" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.curriculum' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-questions" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.questions' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-highschool" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.highschool' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-application" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.application' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-admissions" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.admissions' ); ?>
+
+        </div>
+        <!-- END content section -->
+
+        <!-- content section -->
+        <div id="panel-contact" class="special-content-section">
+
+            <?php get_template_part( 'elements/homepage/panels/panel.contact' ); ?>
 
         </div>
         <!-- END content section -->
@@ -68,3 +214,5 @@
 
 </main>
 <!-- site.layout -->
+
+<?php get_template_part( 'elements/homepage/special/toolbar/toolbar.menu' ); ?>

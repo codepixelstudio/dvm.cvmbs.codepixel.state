@@ -1,0 +1,48 @@
+// stylesheet :: video panel styles
+
+    // settings
+    $video : 1rem;
+
+    // styles
+    #panel-video {
+
+        z-index: 90;
+
+        background: {
+
+            image: url(../img/billboards/dvm/dvm.billboard.01.jpg);
+
+        }
+
+        // container
+        .video-container {
+
+            width: 60vw;
+
+        }
+
+        // video
+        .program-video {
+
+            position: relative;
+
+            padding: 56.25% 0 0 0;
+
+            @include shadowbox( 1rem, 4rem, black, 0.285 );
+
+            // iframe
+            iframe {
+
+                position: absolute;
+
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100%;
+
+            }
+
+        }
+
+    }

@@ -20,8 +20,8 @@
         // options
         acf_add_options_sub_page( array(
 
-			'page_title' 	=> 'General Site Options',
-			'menu_title' 	=> 'General Site Options',
+			'page_title' 	=> 'DVM Site Options',
+			'menu_title' 	=> 'DVM Site Options',
 			'parent_slug'   => 'site_options',
 			'menu_slug' 	=> 'general_options',
 

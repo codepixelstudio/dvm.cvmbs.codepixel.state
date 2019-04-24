@@ -1,6 +1,6 @@
 <?php
 
-	// template name: home
+	// template name: Home
 
     $site_type = get_field( 'site_type', 'options' );
 

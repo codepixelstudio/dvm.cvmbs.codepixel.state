@@ -1,131 +1,152 @@
-<!-- menu -->
-<nav id="toolbar-menu" class="ui-menu">
 
-    <!-- menu list -->
-    <ul>
+<!-- toolbar -->
+<menu id="homepage-toolbar" class="inactive">
 
-        <!-- menu item -->
-        <li class="menu-item">
+    <!-- button -->
+    <button id="toolbar-button" class="menu-item-link" data-open="toolbar-menu-overlay" data-section-link="special-billboard">
 
-            <button class="menu-item-link" href="#" data-section-link="overview">
+        <svg width="80px" height="80px">
 
-                program overview
+            <!-- <path fill-rule="evenodd"  opacity="0.102" fill="rgb(44, 156, 170)" d="M-0.000,0.000 L80.000,0.000 L80.000,80.000 L-0.000,80.000 L-0.000,0.000 Z"/> -->
 
-            </button>
+            <path class="path" fill-rule="evenodd"  fill="rgb(44, 156, 170)" d="M44.000,48.000 L44.000,44.000 L48.000,44.000 L48.000,48.000 L44.000,48.000 ZM44.000,38.000 L48.000,38.000 L48.000,42.000 L44.000,42.000 L44.000,38.000 ZM44.000,32.000 L48.000,32.000 L48.000,36.000 L44.000,36.000 L44.000,32.000 ZM38.000,44.000 L42.000,44.000 L42.000,48.000 L38.000,48.000 L38.000,44.000 ZM38.000,38.000 L42.000,38.000 L42.000,42.000 L38.000,42.000 L38.000,38.000 ZM38.000,32.000 L42.000,32.000 L42.000,36.000 L38.000,36.000 L38.000,32.000 ZM32.000,44.000 L36.000,44.000 L36.000,48.000 L32.000,48.000 L32.000,44.000 ZM32.000,38.000 L36.000,38.000 L36.000,42.000 L32.000,42.000 L32.000,38.000 ZM32.000,32.000 L36.000,32.000 L36.000,36.000 L32.000,36.000 L32.000,32.000 Z"/>
 
-        </li>
-        <!-- END menu item -->
+        </svg>
 
-        <!-- menu item -->
-        <li class="menu-item">
+    </button>
+    <!-- END button -->
 
-            <button class="menu-item-link" href="#" data-section-link="admissions">
+    <!-- menu -->
+    <nav id="toolbar-menu" class="ui-menu">
 
-                admissions
+        <!-- menu list -->
+        <ul class="sticky">
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="overview">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    program overview
 
-            <button class="menu-item-link" href="#" data-section-link="experience">
+                </button>
 
-                hands-on experience
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="admissions">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    admissions
 
-            <button class="menu-item-link" href="#" data-section-link="faculty">
+                </button>
 
-                renowned faculty
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="experience">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    hands-on experience
 
-            <button class="menu-item-link" href="#" data-section-link="learning">
+                </button>
 
-                unique learning opportunities
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="faculty">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    renowned faculty
 
-            <button class="menu-item-link" href="#" data-section-link="research">
+                </button>
 
-                research opportunities
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="learning">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    unique learning opportunities
 
-            <button class="menu-item-link" href="#" data-section-link="hospital">
+                </button>
 
-                teaching hospital
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="research">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    research opportunities
 
-            <button class="menu-item-link" href="#" data-section-link="support">
+                </button>
 
-                student support
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="hospital">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    teaching hospital
 
-            <button class="menu-item-link" href="#" data-section-link="community">
+                </button>
 
-                community
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="support">
 
-        <!-- menu item -->
-        <li class="menu-item">
+                    student support
 
-            <button class="menu-item-link" href="#" data-section-link="commencement">
+                </button>
 
-                commencement
+            </li>
+            <!-- END menu item -->
 
-            </button>
+            <!-- menu item -->
+            <li class="menu-item">
 
-        </li>
-        <!-- END menu item -->
+                <button class="menu-item-link" href="#" data-section-link="community">
 
-    </ul>
-    <!-- END menu list -->
+                    community
 
-</nav>
-<!-- END menu -->
+                </button>
+
+            </li>
+            <!-- END menu item -->
+
+            <!-- menu item -->
+            <li class="menu-item">
+
+                <button class="menu-item-link" href="#" data-section-link="commencement">
+
+                    commencement
+
+                </button>
+
+            </li>
+            <!-- END menu item -->
+
+        </ul>
+        <!-- END menu list -->
+
+    </nav>
+    <!-- END menu -->
+
+</menu>
+<!-- END toolbar -->
