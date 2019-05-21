@@ -21,7 +21,7 @@
 
         <p>
 
-            Ask one of our student ambassadors a question.
+            Ask one of our current students a question.
 
         </p>
 
@@ -33,7 +33,7 @@
 
         <a class="question-link" href="student-ambassadors">
 
-            submit a question
+            connect with an ambassador
 
         </a>
 

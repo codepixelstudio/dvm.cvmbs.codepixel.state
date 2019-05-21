@@ -22,7 +22,7 @@
 
     </p>
 
-    <a class="document-link" href="tours-and-visits">
+    <a class="document-link" href="../tours-and-visits">
 
         schedule a visit
 

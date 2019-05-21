@@ -88,7 +88,7 @@
                 <!-- title -->
                 <span class="button-title">
 
-                    admissions requirements
+                    admission requirements
 
                 </span>
                 <!-- END title -->
@@ -105,7 +105,7 @@
             <!-- END link -->
 
             <!-- link -->
-            <a id="button-contact" class="button-link" href="#panel-contact">
+            <a id="button-contact" class="button-link" href="contact">
 
                 <!-- title -->
                 <span class="button-title">

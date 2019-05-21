@@ -12,13 +12,13 @@
 
     <h2>
 
-        are you a high school student interested in studying veterinary medicine?
+        so you want to be a vet?
 
     </h2>
 
     <p>
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Find out what you need to do to prepare for veterinary school,<br />and schedule an advising appointment to learn more about the pathway to veterinary medicine.
 
     </p>
 

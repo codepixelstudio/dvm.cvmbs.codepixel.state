@@ -27,7 +27,7 @@
 
         <p>
 
-            Four academic departments contribute faculty expertise and teaching to our Doctor of Veterinary Medicine Program – a feature that provides you with the most complete, in-depth scientific and medical knowledge and sets our program apart from all other veterinary schools. These departments are: Biomedical Sciences, Clinical Sciences, Environmental & Radiological Health Sciences, and Microbiology, Immunology & Pathology.
+            Four academic departments contribute faculty expertise and teaching to our Doctor of Veterinary Medicine Program – a feature that provides you with the most complete, in-depth scientific and medical knowledge and sets our program apart from all other veterinary schools.
 
         </p>
 
