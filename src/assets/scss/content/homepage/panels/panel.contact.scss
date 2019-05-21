@@ -6,7 +6,11 @@
     // styles
     #panel-contact {
 
-        min-height: 100vh;
+        z-index: 100;
+
+        // min-height: 100vh;
+        height: auto;
+        padding: 10rem 0 10rem 0;
 
         background: {
 
@@ -26,6 +30,16 @@
 
             @include color( $g140, 0.000 );
 
+            .description-text {
+
+                @include flex-h-c-v-c( false );
+
+                margin: 0 0 1rem 0;
+
+                @include font( $industry, 0.875rem, 600 );
+
+            }
+
         }
 
         // buttons
@@ -40,6 +54,8 @@
 
             .contact-button {
 
+                position: relative;
+
                 @include flex-v-b-h-s( true );
 
                 width: calc( 25% - 2rem );
@@ -48,6 +64,7 @@
                 padding: 0 1rem 1rem 1rem;
 
                 @include fill( $g135, 0.125 );
+                @include fill( $cvnavy, 0.215 );
 
                 @include shadowbox( 1rem, 3rem, black, 0.215 );
 
@@ -57,11 +74,60 @@
                 &:hover {
 
                     @include fill( $dark, 0.125 );
+                    @include fill( $cvnavy, 0.000 );
+
+                    // before
+                    &:before {
+
+                        // opacity: 1.000;
+                        opacity: 0.465;
+
+                        transition: all 220ms linear 0ms;
+
+                    }
+
+                    span {
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                }
+
+                // before
+                &:before {
+
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+
+                    z-index: 0;
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+
+                    }
+
+                    opacity: 0.000;
+
+                    transition: all 220ms linear 0ms;
 
                 }
 
                 // text
                 span {
+
+                    position: relative;
+
+                    z-index: 10;
 
                     @include font( $klavislim, 1rem, 400 );
 
@@ -70,6 +136,137 @@
                     @include typo( 1rem, 0.045em );
 
                     @include color( $gold, 0.000 );
+                    @include color( white, 0.000 );
+
+                    transition: all 220ms linear 0ms;
+
+                }
+
+            }
+
+            // thing
+            #high-school-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.00.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #college-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/conact.01.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #prospective-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.02.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #new-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.03.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #alumni {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.08.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #transfer-student {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.04.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #employer {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.06.jpg);
+
+                    }
+
+                }
+
+            }
+
+            // thing
+            #other {
+
+                // before
+                &:before {
+
+                    background: {
+
+                        image: url(../img/content/panels/contact/contact.05.jpg);
+
+                    }
 
                 }
 

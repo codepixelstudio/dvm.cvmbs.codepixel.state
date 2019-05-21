@@ -8,6 +8,8 @@
 
         z-index: 60;
 
+        height: 60vh;
+
         background: {
 
             image: url(../img/billboards/dvm/dvm.billboard.04.jpg);
@@ -81,7 +83,7 @@
                     margin: 2rem 0 0 0;
                     padding: 0.0625rem 1.5rem 0 1.5rem;
 
-                    border: 1px solid white;
+                    // border: 1px solid white;
 
                     @include font( $klavislim, 1rem, 400 );
 
@@ -90,6 +92,19 @@
                     @include typo( 0.875rem, 0.045em );
 
                     @include color( white, 0.000 );
+
+                    @include fill( $cvnavy, 0.365 );
+
+                    @include shadowbox( 1rem, 4rem, black, 0.385 );
+
+                    transition: all 220ms linear 0ms;
+
+                    // hover state
+                    &:hover {
+
+                        @include fill( $roarange, 0.000 );
+
+                    }
 
                 }
 

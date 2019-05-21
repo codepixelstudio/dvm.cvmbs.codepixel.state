@@ -54,6 +54,72 @@
 
                     $page_blocks = get_field( 'page_blocks' );
 
+                    while ( have_rows('page_blocks') ) : the_row();
+
+    					if ( get_row_layout() == 'call_out' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.callout' );
+
+    					elseif ( get_row_layout() == 'content_area_with_image') :
+
+    						get_template_part( 'elements/blocks/layered/layered.content.image' );
+
+    					elseif ( get_row_layout() == 'dual_ctas' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.ctas' );
+
+    					elseif ( get_row_layout() == 'fast_facts' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.facts' );
+
+    					elseif ( get_row_layout() == 'group_bios' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.bios' );
+
+    					elseif ( get_row_layout() == 'highlight_group' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.highlight.group' );
+
+    					elseif ( get_row_layout() == 'junk_drawer' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.junk' );
+
+    					elseif ( get_row_layout() == 'launch_pads' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.launchpads' );
+
+    					elseif ( get_row_layout() == 'page_quote' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.quotation' );
+
+    					elseif ( get_row_layout() == 'single_cta' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.cta' );
+
+    					elseif ( get_row_layout() == 'source_stories' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.news' );
+
+    					elseif ( get_row_layout() == 'spotlight' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.spotlight' );
+
+    					elseif ( get_row_layout() == 'video' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.video' );
+
+    					elseif ( get_row_layout() == 'general_content' ) :
+
+    						get_template_part( 'elements/blocks/layered/layered.text' );
+
+    					else:
+
+    						// no blocks found
+
+    					endif;
+
+    				endwhile;
+
                     while ( have_rows( 'page_blocks' ) ) : the_row();
 
                         if ( get_row_layout() == 'steps' ) :

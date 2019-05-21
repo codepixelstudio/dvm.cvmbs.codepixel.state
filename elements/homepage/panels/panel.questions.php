@@ -15,7 +15,7 @@
 
         <h4>
 
-            want to know more?
+            want to know more<br />about the CSU experience?
 
         </h4>
 
@@ -27,11 +27,11 @@
 
         <p class="smaller">
 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Our student ambassador team is made up of highly-motivated and passionate veterinary students, who are here to help you explore opportunities at CSU.
 
         </p>
 
-        <a class="question-link" href="#">
+        <a class="question-link" href="student-ambassadors">
 
             submit a question
 

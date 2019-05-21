@@ -1,6 +1,6 @@
 {
     "key": "group_5ca77929753ab",
-    "title": "Layered Page",
+    "title": "Layered Page (legacy)",
     "fields": [
         {
             "key": "field_5ca7793c2704a",
@@ -264,77 +264,6 @@
                 "id": ""
             },
             "layouts": {
-                "layout_5cb5ff63bb621": {
-                    "key": "layout_5cb5ff63bb621",
-                    "name": "steps",
-                    "label": "Step-By-Step",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cb5ff879db51",
-                            "label": "Step",
-                            "name": "step",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "field_5cb5ffa49db52",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "row",
-                            "button_label": "Add Step",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5cb5ffa49db52",
-                                    "label": "Step #",
-                                    "name": "step_#",
-                                    "type": "number",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "min": "",
-                                    "max": "",
-                                    "step": 1
-                                },
-                                {
-                                    "key": "field_5cb5ffbd9db53",
-                                    "label": "Step Text",
-                                    "name": "step_text",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "basic",
-                                    "media_upload": 0,
-                                    "delay": 0
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5cb6475924183": {
                     "key": "layout_5cb6475924183",
                     "name": "text_editor",
@@ -1293,7 +1222,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "pages\/layered.php"
+                "value": "pages\/layered.legacy.php"
             }
         ]
     ],
@@ -1307,5 +1236,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1556134354
+    "modified": 1557268126
 }

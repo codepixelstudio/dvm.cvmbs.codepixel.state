@@ -15,7 +15,7 @@
 
         <h3>
 
-            super flashy marketing speak fancy words go right here
+            a leader in veterinary education
 
         </h3>
 
@@ -38,37 +38,35 @@
     <div class="content callouts">
 
         <!-- callout -->
-        <div class="callout-block">
+        <div id="ranking" class="callout-block">
 
-            <span></span>
+            <span class="number">#3</span>
 
-            <span></span>
+            <span class="stat-label">veterinary school<br />in the nation</span>
 
-            <span></span>
-
-        </div>
-        <!-- END callout -->
-
-        <!-- callout -->
-        <div class="callout-block">
-
-            <span></span>
-
-            <span></span>
-
-            <span></span>
+            <span class="stat-label source">(u.s. news &amp; world report)</span>
 
         </div>
         <!-- END callout -->
 
         <!-- callout -->
-        <div class="callout-block">
+        <div id="specialties" class="callout-block">
 
-            <span></span>
+            <span class="stat-label">world-class faculty<br />who represent</span>
 
-            <span></span>
+            <span class="number">28</span>
 
-            <span></span>
+            <span class="stat-label">veterinary specialties</span>
+
+        </div>
+        <!-- END callout -->
+
+        <!-- callout -->
+        <div id="visits" class="callout-block ">
+
+            <span class="number">40,000</span>
+
+            <span class="stat-label">patient visits per year,<br />offering great cases<br />for learning</span>
 
         </div>
         <!-- END callout -->

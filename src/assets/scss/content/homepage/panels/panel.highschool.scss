@@ -6,7 +6,7 @@
     // styles
     #panel-highschool {
 
-        z-index: 80;
+        z-index: 90;
 
         height: auto;
         padding: 0 0 0 0;
@@ -20,7 +20,7 @@
         // overlay
         .panel-overlay {
 
-            @include fill( $cvnavy, 0.165 );
+            @include fill( $cvnavy, 0.000 );
 
         }
 
@@ -69,8 +69,6 @@
                 margin: 2rem 1rem 0 1rem;
                 padding: 0.0625rem 1.5rem 0 1.5rem;
 
-                border: 1px solid white;
-
                 @include font( $klavislim, 1rem, 400 );
 
                 @include text( $up );
@@ -81,18 +79,16 @@
 
                 @include color( white, 0.000 );
 
-                // @include fill( $roarange, 0.000 );
+                @include fill( $roarange, 0.000 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
 
                 transition: all 220ms linear 0ms;
 
                 // hover state
                 &:hover {
 
-                    // border-color: $roarange;
-
-                    @include color( white, 0.000 );
-
-                    @include fill( $g140, 0.000 );
+                    @include fill( $blue, 0.000 );
 
                 }
 

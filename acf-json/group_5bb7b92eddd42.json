@@ -1,0 +1,387 @@
+{
+    "key": "group_5bb7b92eddd42",
+    "title": "General Site Options",
+    "fields": [
+        {
+            "key": "field_5bb7b9496d2a5",
+            "label": "Site Type",
+            "name": "site_type",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "college": "College",
+                "department": "Department",
+                "special": "Special Unit"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_5bb7c9e0a4886",
+            "label": "Site Title",
+            "name": "site_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7d1239d4c6",
+            "label": "Site Title Line Break?",
+            "name": "site_title_line_break",
+            "type": "checkbox",
+            "instructions": "check this box if the site's title should include a line break to display properly",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "department"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "special"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "break": "include site title line break"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5bb7d27b9d4c7",
+            "label": "Site Title (line 1)",
+            "name": "site_title_line_1",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7d1239d4c6",
+                        "operator": "==",
+                        "value": "break"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7d2a29d4c8",
+            "label": "Site Title (line 2)",
+            "name": "site_title_line_2",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7d1239d4c6",
+                        "operator": "==",
+                        "value": "break"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bb7cc14a4887",
+            "label": "Site Background",
+            "name": "site_background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "large",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c3f576f2256e",
+            "label": "Homepage Places",
+            "name": "site_homepage_places",
+            "type": "post_object",
+            "instructions": "select 4 places to feature on the homepage",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "college"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "place"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_5cda0d16304de",
+            "label": "Footer Contact Info",
+            "name": "footer_contact_info",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bb7b9496d2a5",
+                        "operator": "==",
+                        "value": "college"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_5cda122e304df",
+                    "label": "Mailing Address",
+                    "name": "mailing_address",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "1601 Campus Delivery\r\nFort Collins, CO 80523-1601",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5cda12fcac3b5",
+                    "label": "Phone",
+                    "name": "phone",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "CVMBS Main (970) 491-7051\r\nVeterinary Teaching Hospital (970) 297-5000",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_5cda179d8e216",
+                    "label": "Facebook Link",
+                    "name": "facebook_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/www.facebook.com\/home.php?#!\/pages\/Fort-Collins-CO\/CSU-College-of-Veterinary-Medicine-and-bms\/296364382382",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17c38e217",
+                    "label": "Twitter Link",
+                    "name": "twitter_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/twitter.com\/csuvetmedbiosci",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17da8e218",
+                    "label": "LinkedIn Link",
+                    "name": "linkedin_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/www.linkedin.com\/groups?gid=2792630&trk=myg_ugrp_ovr",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda17e78e219",
+                    "label": "YouTube Link",
+                    "name": "youtube_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.youtube.com\/csuvetmedbioscience\/",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5cda18148e21a",
+                    "label": "Instagram Link",
+                    "name": "instagram_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "https:\/\/www.instagram.com\/csuvetmedbiosci",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "general_options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1557850451
+}

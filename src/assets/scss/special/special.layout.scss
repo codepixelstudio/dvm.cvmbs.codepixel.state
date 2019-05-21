@@ -218,7 +218,7 @@
 
                     @include flex-v-b-h-st( false );
 
-                    width: 20rem;
+                    width: 22rem;
 
                 }
 
@@ -227,10 +227,10 @@
 
                     @include flex-v-b-h-e( false );
 
-                    width: 20rem;
-                    height: 8rem;
+                    width: 22rem;
+                    height: 9rem;
                     margin: 2rem 0 0 0;
-                    padding: 0 1.875rem 1.875rem 0;
+                    padding: 0 1.875rem 1.875rem 1rem;
 
                     @include text( none, right );
 
@@ -498,7 +498,7 @@
 
         }
 
-        @include shadowbox( 2rem, 4.5rem, black, 0.215 );
+        @include shadowbox( 1rem, 6rem, black, 0.215 );
 
     }
 

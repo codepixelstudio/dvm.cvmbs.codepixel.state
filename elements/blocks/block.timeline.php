@@ -1,3 +1,8 @@
+<?php
+
+	$timeline_title = get_sub_field( 'heading' );
+
+?>
 
 <!-- block container -->
 <div class="template-block">
@@ -8,23 +13,65 @@
         <!-- timeline -->
         <div class="timeline">
 
+		<<?php echo $timeline_title[ 'html_tag' ]; ?> class="timeline-title">
+
+			<?php echo $timeline_title[ 'title' ]; ?>
+
+		</<?php echo $timeline_title[ 'html_tag' ]; ?>>
+
         <?php
 
             if ( have_rows( 'timeline_entries' ) ) :
 
                 while( have_rows( 'timeline_entries' ) ) : the_row();
 
-                    $entry_date    = get_sub_field( 'entry_date' );
-                    $entry_title   = get_sub_field( 'entry_title' );
-                    $entry_content = get_sub_field( 'entry_content' );
+					$date_style      = get_sub_field( 'date_style' );
+                    $entry_date      = get_sub_field( 'entry_date' );
+					$entry_date_text = get_sub_field( 'entry_date_text' );
+                    $entry_title     = get_sub_field( 'entry_title' );
+                    $entry_content   = get_sub_field( 'entry_content' ); ?>
 
-                    echo $entry_date . '<br />';
+					<div class="timeline-entry">
 
-                    echo $entry_title . '<br />';
+						<div class="timeline-entry-content">
 
-                    echo $entry_content;
+							<span class="timeline-entry-date">
 
-                endwhile;
+								<?php
+
+									if ( $date_style ) {
+
+										// $date = dateFormat(  )
+
+										echo $entry_date;
+
+									} else {
+
+										echo $entry_date_text;
+
+									}
+
+								?>
+
+							</span>
+
+		                    <span class="timeline-entry-title">
+
+								<?php echo $entry_title; ?>
+
+							</span>
+
+							<span class="timeline-entry-text">
+
+								<?php echo $entry_content; ?>
+
+							</span>
+
+						</div>
+
+					</div>
+
+                <?php endwhile;
 
             endif;
 

@@ -39,6 +39,17 @@
 
             <?php
 
+                $page_notification = get_field( 'page_notification' );
+                $notification = $page_notification[ 'notification' ];
+
+                // print_r( $notification );
+
+                if ( $notification ) {
+
+                    get_template_part( 'elements/blocks/block.notification' );
+
+                }
+
                 if ( have_rows( 'page_blocks' ) ) :
 
                     $page_blocks = get_field( 'page_blocks' );
@@ -76,6 +87,18 @@
                         elseif ( get_row_layout() == 'accordion' ) :
 
                             get_template_part( 'elements/blocks/block.accordion' );
+
+                        elseif ( get_row_layout() == 'steps' ) :
+
+                            get_template_part( 'elements/blocks/block.steps' );
+
+                        elseif ( get_row_layout() == 'timeline' ) :
+
+                            get_template_part( 'elements/blocks/block.timeline' );
+
+                        elseif ( get_row_layout() == 'styled_list' ) :
+
+                            get_template_part( 'elements/blocks/block.styled.list' );
 
                         else:
 

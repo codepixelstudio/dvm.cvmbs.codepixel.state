@@ -29,7 +29,7 @@
 
             @include flex-v-c-h-c( false );
 
-            padding: 8rem 5rem 8rem 5rem;
+            padding: 8rem 10rem 8rem 10rem;
 
             text-align: center;
 
@@ -73,6 +73,8 @@
                 @include color( white, 0.000 );
 
                 @include fill( $roarange, 0.000 );
+
+                @include shadowbox( 1rem, 4rem, black, 0.385 );
 
                 transition: all 220ms linear 0ms;
 

@@ -10,12 +10,14 @@
 <!-- content -->
 <div class="panel-content">
 
-    <h2>I am a...</h2>
+    <h2>take the next steps</h2>
+
+    <span class="description-text">To learn more about your options, let us know if you are a...</span>
 
     <div class="button-group">
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="high-school-student" class="contact-button">
 
             <span>
 
@@ -27,7 +29,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="college-student" class="contact-button">
 
             <span>
 
@@ -39,7 +41,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="prospective-student" class="contact-button">
 
             <span>
 
@@ -51,7 +53,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="new-student" class="contact-button">
 
             <span>
 
@@ -63,7 +65,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="alumni" class="contact-button">
 
             <span>
 
@@ -75,7 +77,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="transfer-student" class="contact-button">
 
             <span>
 
@@ -87,7 +89,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="employer" class="contact-button">
 
             <span>
 
@@ -99,7 +101,7 @@
         <!-- END button -->
 
         <!-- button -->
-        <div class="contact-button">
+        <div id="other" class="contact-button">
 
             <span>
 

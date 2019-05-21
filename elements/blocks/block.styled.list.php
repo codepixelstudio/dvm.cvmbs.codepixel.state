@@ -10,26 +10,36 @@
 
         <?php
 
-            if ( have_rows( 'styled_list_items' ) ) :
+            if ( have_rows( 'styled_list_items' ) ) : ?>
 
-                while( have_rows( 'styled_list_items' ) ) : the_row();
+			<!-- <ul> -->
+
+                <?php while( have_rows( 'styled_list_items' ) ) : the_row();
 
                     $item_title   = get_sub_field( 'list_item_title' );
                     $item_content = get_sub_field( 'list_item_content' ); ?>
 
-                    <?php echo $item_title; ?>
+					<div class="styled-list-item">
 
-                    <br>
+	                    <h5 class="styled-list-item-title">
 
-                    <?php echo $item_content; ?>
+							<?php echo $item_title; ?>
 
-                    <br><br>
+						</h5>
 
-                <?php endwhile;
+	                    <p class="styled-list-item-content">
 
-            endif;
+							<?php echo $item_content; ?>
 
-        ?>
+						</p>
+
+					</div>
+
+                <?php endwhile; ?>
+
+			<!-- </ul> -->
+
+            <?php endif; ?>
 
         </div>
         <!-- END styled list -->

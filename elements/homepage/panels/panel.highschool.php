@@ -26,19 +26,19 @@
     <div class="button-row">
 
         <!-- advising -->
-        <a class="document-link" href="#">
+        <a class="document-link" href="so-you-want-to-be-a-vet">
 
-            schedule a pre-vet advising appointment
+            prepare for veterinary school
 
         </a>
         <!-- END advising -->
 
         <!-- tour -->
-        <a class="document-link" href="#">
+        <!-- <a class="document-link" href="#">
 
             tour CSU's campus
 
-        </a>
+        </a> -->
         <!-- END tour -->
 
     </div>
