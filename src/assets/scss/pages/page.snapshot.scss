@@ -41,6 +41,15 @@
 
                     }
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        height: auto;
+                        min-height: 75vh;
+                        padding: 5rem 2rem 2rem 2rem;
+
+                    }
+
                     // before
                     &:before {
 
@@ -78,8 +87,8 @@
                                 linear-gradient(
 
                                     10deg,
-                                    transparentize( $cvnavy, 0.235 ) 0%,
-                                    transparentize( red, 1.000 ) 70%
+                                    transparentize( $cvnavy, 0.035 ) 0%,
+                                    transparent 100%
 
                                 )
 
@@ -134,6 +143,17 @@
 
                         @include color( $cvellow, 0.000 );
 
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            margin: 0 0 1rem 0;
+
+                            font-size: 2rem;
+
+                            line-height: 1.5rem;
+
+                        }
+
                     }
 
                     // subtitle
@@ -151,6 +171,17 @@
 
                         @include color( white, 0.000 );
 
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            margin: 0 0 1rem 0;
+
+                            font-size: 1rem;
+
+                            line-height: 1.25rem;
+
+                        }
+
                     }
 
                     // intro
@@ -164,6 +195,13 @@
 
                         // @include color( $rite-lite, 0.000 );
                         @include color( white, 0.125 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            line-height: 1.125rem;
+
+                        }
 
                     }
 
@@ -188,6 +226,13 @@
 
                     padding: calc( 50vh + 5rem ) 0 0 0;
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: calc( 75vh + 2rem ) 0 0 0;
+
+                    }
+
                 }
 
                 // default
@@ -199,20 +244,45 @@
 
             }
 
+            // common
+            .content-row {
+
+                margin: 0 5rem 0 5rem;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    margin: 0 2rem 0 2rem;
+
+                }
+
+            }
+
             // demographics
             #demographics {
 
-                margin: 0 5rem 0 5rem;
                 padding: 0 0 3rem 0;
 
                 border-bottom: 1px solid grey;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    padding: 0 0 0 0;
+
+                    border-bottom: none;
+
+                }
 
             }
 
             // map
             #map {
 
-                margin: 0 5rem 0 5rem;
                 padding: 2rem 0 3rem 0;
 
                 border-bottom: 1px solid grey;
@@ -222,10 +292,20 @@
             // statistics
             #statistics {
 
-                margin: 0 5rem 0 5rem;
                 padding: 3rem 0 3rem 0;
 
                 border-bottom: 1px solid grey;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    padding: 2rem 0 0 0;
+
+                    border-bottom: none;
+
+                }
 
                 // content blocks
                 .content-block {
@@ -233,6 +313,13 @@
                     @include flex-v-c-h-c( false );
 
                     @include text( none, center );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 2rem 0 2rem 0;
+
+                    }
 
                 }
 
@@ -316,7 +403,6 @@
 
                 @include flex-h-j-v-c( false );
 
-                margin: 0 5rem 0 5rem;
                 padding: 3rem 0 3rem 0;
 
             }
@@ -344,10 +430,18 @@
 
                         border-right: 1px solid grey;
 
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            border-right: none;
+                            border-bottom: 1px solid transparentize( $app05, 0.385 );
+
+                        }
+
                         // last child
                         &:last-child {
 
-                            border: none;
+                            border-right: none;
 
                         }
 

@@ -34,6 +34,13 @@
 
             @include color( white, 0.000 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 10rem 2rem 10rem 2rem;
+
+            }
+
             // common
             .content {
 

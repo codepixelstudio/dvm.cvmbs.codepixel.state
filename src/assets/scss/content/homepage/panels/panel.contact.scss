@@ -18,6 +18,13 @@
 
         }
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            padding: 4rem 0 0rem 0;
+
+        }
+
         // overlay
         .panel-overlay {
 
@@ -38,6 +45,13 @@
 
                 @include font( $industry, 0.875rem, 600 );
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    margin: 0 2rem 0 2rem;
+
+                }
+
             }
 
         }
@@ -51,6 +65,15 @@
 
             width: 100%;
             padding: 0 4rem 0 4rem;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 1rem 1rem 1rem 1rem;
+
+            }
 
             .contact-button {
 
@@ -69,6 +92,14 @@
                 @include shadowbox( 1rem, 3rem, black, 0.215 );
 
                 transition: all 220ms linear 0ms;
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: calc( 100% - 2rem );
+                    height: 8rem;
+
+                }
 
                 // hover state
                 &:hover {

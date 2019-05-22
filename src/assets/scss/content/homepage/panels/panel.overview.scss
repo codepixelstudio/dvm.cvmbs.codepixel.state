@@ -16,6 +16,13 @@
 
         }
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            //
+
+        }
+
         // overlay
         .panel-overlay {
 
@@ -31,6 +38,15 @@
             height: 100%;
             padding: 5rem 0 0 0;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                @include flex-v-t-h-st( false );
+
+                padding: 2rem 0 0 0;
+
+            }
+
             // text
             .text {
 
@@ -39,7 +55,13 @@
                 width: 30vw;
                 padding: 0 2rem 5rem 5rem;
 
-                // @include fill( white, 0.965 );
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+                    padding: 0 2rem 2rem 2rem;
+
+                }
 
                 // heading
                 h3 {
@@ -78,6 +100,16 @@
                 width: 70vw;
                 padding: 0 5rem 5rem 0;
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    @include flex-v-t-h-st( false );
+
+                    width: 100%;
+                    padding: 0 0 0 0;
+
+                }
+
                 // blocks
                 .callout-block {
 
@@ -93,6 +125,25 @@
                     @include fill( $cvnavy, 0.165 );
 
                     @include shadowbox( 1rem, 3rem, black, 0.315 );
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        margin: 0 2rem 2rem 2rem;
+                        padding: 2rem 1rem 2rem 1rem;
+
+                    }
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        br {
+
+                            display: block;
+
+                        }
+
+                    }
 
                 }
 

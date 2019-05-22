@@ -13,11 +13,11 @@
     <!-- text content -->
     <div class="content text">
 
-        <h4>
+        <h2>
 
             want to know more<br />about the CSU experience?
 
-        </h4>
+        </h2>
 
         <p>
 

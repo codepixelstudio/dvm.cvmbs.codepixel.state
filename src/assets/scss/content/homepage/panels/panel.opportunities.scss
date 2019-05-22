@@ -41,6 +41,13 @@
 
             text-align: center;
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 6rem 2.5rem 6rem 2.5rem;
+
+            }
+
             // heading
             h2 {
 

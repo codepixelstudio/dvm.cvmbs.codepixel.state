@@ -8,7 +8,8 @@
 
         z-index: 60;
 
-        height: 60vh;
+        // height: 60vh;
+        height: auto;
 
         background: {
 
@@ -29,21 +30,36 @@
 
             }
 
+            // image
+            .image {
+
+                width: 0;
+
+            }
+
             // text
             .text {
 
                 @include flex-v-c-h-s( false );
 
-                padding: 0 5rem 0 5rem;
+                padding: 12rem 5rem 12rem 5rem;
 
                 @include fill( $dark, 0.065 );
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    width: 100%;
+                    padding: 8rem 2.5rem 8rem 2.5rem;
+
+                }
+
                 // heading
-                h4 {
+                h2 {
 
-                    @include font( $klavislim, 2.5rem, 400 );
+                    // @include font( $klavislim, 2.5rem, 400 );
 
-                    @include typo( 2rem, 0.045em );
+                    // @include typo( 2rem, 0.045em );
 
                     @include color( $gold, 0.000 );
 

@@ -21,11 +21,11 @@
     <!-- text content -->
     <div class="content text">
 
-        <h4>
+        <h2>
 
             support services
 
-        </h4>
+        </h2>
 
         <p>
 

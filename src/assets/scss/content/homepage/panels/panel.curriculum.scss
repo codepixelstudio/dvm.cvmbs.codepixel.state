@@ -35,6 +35,13 @@
 
             @include color( $g140, 0.000 );
 
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 8rem 2.5rem 8rem 2.5rem;
+
+            }
+
             // heading
             h2 {
 

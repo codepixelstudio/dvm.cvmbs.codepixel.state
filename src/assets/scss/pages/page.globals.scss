@@ -6,22 +6,39 @@
     // styles
     #site-layout {
 
+        // flexible + layered
+        &.flexible,
+        &.layered,
+        &.snapshot {
+
+            // header
+            .page-header {
+
+                // styled
+                &.styled {
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        padding: 5rem 2rem 2rem 2rem;
+
+                    }
+
+                }
+
+            }
+
+        }
+
         // class hook
         &.secondary {
 
             position: fixed;
 
-            top: -1rem;
             top: 0;
-            right: -1rem;
             right: 0;
-            bottom: -1rem;
             bottom: 0;
-            left: -1rem;
             left: 0;
-
-            // width: calc( 100vw + 2rem );
-            // height: calc( 100vh + 2rem );
 
             overflow: scroll;
 

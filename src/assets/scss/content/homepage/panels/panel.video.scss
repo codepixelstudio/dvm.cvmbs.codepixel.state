@@ -17,10 +17,31 @@
 
         }
 
+        // content
+        .panel-content {
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 0 2rem 0 2rem;
+
+            }
+
+        }
+
         // title
         h2 {
 
             @include color( $g140, 0.000 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                font-size: 1.5rem;
+
+                text-align: center;
+
+            }
 
         }
 
@@ -29,6 +50,13 @@
 
             width: 60vw;
             margin: 2rem 0 2rem 0;
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 100%;
+
+            }
 
         }
 
@@ -66,6 +94,13 @@
             @include text( none, center );
 
             @include color( $app05, 0.165 );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                width: 80%;
+
+            }
 
         }
 

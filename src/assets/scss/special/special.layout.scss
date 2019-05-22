@@ -14,7 +14,6 @@
 
         width: 100vw;
         height: auto;
-        // margin: 0 0 5rem 0;
         margin: 0 0 0 0;
         padding: 100vh 0 0 0;
 
@@ -37,8 +36,6 @@
 
             height: 100vh;
 
-            // overflow: hidden;
-
             background: {
 
                 // image: url(../img/billboards/dvm/dvm.billboard.00.jpg);
@@ -55,6 +52,18 @@
                     filter: blur( 0px );
 
             transition: all 0ms linear 120ms;
+
+            // mobile
+            @include breakpoint ( large down ) {
+
+                background: {
+
+                    attachment: scroll;
+                    position: 80% center;
+
+                }
+
+            }
 
             // overlay
             .billboard-overlay {
@@ -105,6 +114,43 @@
 
                 }
 
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    background: {
+
+                        image:
+
+                            linear-gradient(
+
+                                -45deg,
+                                transparentize( $dark, 0.215 ) 0%,
+                                transparent 70%
+
+                            ),
+
+                            linear-gradient(
+
+                                315deg,
+                                transparentize( $dark, 0.215 ) 0%,
+                                transparent 70%
+
+                            ),
+
+                            linear-gradient(
+
+                                10deg,
+                                transparentize( $cvnavy, 0.000 ) 0%,
+                                transparent 100%
+
+                            )
+
+                        ;
+
+                    }
+
+                }
+
             }
 
             // content
@@ -120,6 +166,22 @@
                 padding: 5rem 2rem 6rem 6rem;
 
                 @include font( $industry, 0.875rem, 700 );
+
+                // mobile
+                @include breakpoint ( large down ) {
+
+                    @include flex-v-b-h-st( false );
+
+                    padding: 4rem 2rem 2rem 2rem;
+
+                }
+
+                // mobile
+                @include breakpoint ( small only ) {
+
+                    //
+
+                }
 
                 // content
                 #billboard-content {
@@ -148,6 +210,24 @@
 
                         @include typo( 3.375rem, 0.025em );
 
+                        // mobile
+                        @include breakpoint ( large down ) {
+
+                            @include font( $klavislim, 3.5rem, 400 );
+
+                        }
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            height: auto;
+
+                            @include font( $klavislim, 2.5rem, 400 );
+
+                            line-height: 2.5rem;
+
+                        }
+
                     }
 
                     // text
@@ -166,6 +246,18 @@
                         @include typo( 1.25rem, 0.065em );
 
                         @include color( $faux-gold, 0.000 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            width: auto;
+                            margin: 0 0 0 0;
+
+                            @include font( $vitesse, 0.75rem, 500 );
+
+                            @include typo( 1rem, 0.035em );
+
+                        }
 
                     }
 
@@ -220,6 +312,17 @@
 
                     width: 22rem;
 
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        position: static;
+
+                        // @include flex-v-b-h-s( false );
+
+                        width: 100%;
+
+                    }
+
                 }
 
                 // button
@@ -241,6 +344,26 @@
                     @include shadowbox( 1.5rem, 4rem, black, 0.525 );
 
                     transition: all 360ms $outex 0ms;
+
+                    // mobile
+                    @include breakpoint ( small only ) {
+
+                        @include flex-v-b-h-s( false );
+
+                        width: 100%;
+                        // width: auto;
+                        height: auto;
+                        margin: 1rem 0 0 0;
+                        padding: 2.25rem 1.875rem 1rem 1.5rem;
+
+                        // first child
+                        &:first-child {
+
+                            // margin: 0 0 0 0;
+
+                        }
+
+                    }
 
                     // title
                     .button-title {
@@ -278,6 +401,14 @@
 
                             transition: all 360ms $outex 0ms;
 
+                            // mobile
+                            @include breakpoint ( small only ) {
+
+                                right: auto;
+                                left: 0;
+
+                            }
+
                         }
 
                     }
@@ -290,6 +421,13 @@
                         @include typo( 0.875rem, 0.035em );
 
                         @include color( white, 0.225 );
+
+                        // mobile
+                        @include breakpoint ( small only ) {
+
+                            @include hide;
+
+                        }
 
                     }
 
@@ -499,6 +637,13 @@
         }
 
         @include shadowbox( 1rem, 6rem, black, 0.215 );
+
+        // mobile
+        @include breakpoint ( large down ) {
+
+            background-attachment: scroll;
+
+        }
 
     }
 
