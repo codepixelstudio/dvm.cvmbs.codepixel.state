@@ -27,7 +27,7 @@
 
                     @include flex-v-b-h-s( false );
 
-                    height: 50vh;
+                    height: 65vh;
                     padding: 0 12vh 3rem 12vh;
 
                     @include fill( $cvnavy, 0.000 );
@@ -224,7 +224,7 @@
                 // styled
                 &.styled {
 
-                    padding: calc( 50vh + 5rem ) 0 0 0;
+                    padding: calc( 65vh + 5rem ) 0 0 0;
 
                     // mobile
                     @include breakpoint ( small only ) {

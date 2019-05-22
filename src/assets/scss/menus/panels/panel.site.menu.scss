@@ -37,6 +37,13 @@
 
         @include fill( white, 1.000 );
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: calc( 100vh - 4rem );
+
+        }
+
         // menu open state
         .is-open & {
 
@@ -54,6 +61,13 @@
             // @include fill( $nite, 0.785 );
 
             @include gradient( 0deg, $g140, 0.325, 0%, red, 1.000, 50% );
+
+            // mobile
+            @include breakpoint ( small only ) {
+
+                padding: 4rem 0 0 0;
+
+            }
 
             // header
             .panel-header {

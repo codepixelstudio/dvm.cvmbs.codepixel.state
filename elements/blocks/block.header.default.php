@@ -10,7 +10,7 @@
 <header class="page-header default">
 
     <!-- page title -->
-    <h1 class="page-title">
+    <h1 class="entry-title">
 
         <?php the_title(); ?>
 

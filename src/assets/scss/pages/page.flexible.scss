@@ -11,6 +11,12 @@
 
             @include color( $app05, 0.265 );
 
+            .entry-title {
+
+                margin: 0 0 0 0;
+
+            }
+
             // header
             .page-header {
 
@@ -171,7 +177,7 @@
                 // default
                 &.default {
 
-                    padding: 10rem 12vh 0 12vh;
+                    padding: 6.25em 8vw 0;
 
                 }
 
@@ -822,61 +828,6 @@
             	}
             }
 
-            // accordions
-            .cvmbs-accordions {
-            	margin-top: 1.5em;
-            }
-
-            .cvmbs-accordion {
-
-            	&.has-loaded {
-            		margin-bottom: 1.25rem;
-            	}
-
-            	&__title {
-            		.has-loaded & {
-            			margin: 0;
-            		}
-            	}
-
-            	&__toggle {
-            		display: flex;
-            		align-items: center;
-            		justify-content: space-between;
-            		width: 100%;
-            		background: #d3d3d3;
-            		padding: 1rem;
-            		text-align: left;
-            	}
-
-            	&__content {
-            		transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1);
-
-            		.has-loaded & {
-            			opacity: 1;
-            			width: 100%;
-            			height: 100%;
-            			max-height: 1000vh;
-            			background: #eee;
-            			padding: 1rem;
-
-            			&[aria-hidden="true"] {
-            				display: none;
-            				overflow: hidden;
-            				visibility: hidden;
-            				opacity: 0;
-            				height: 0;
-            				max-height: 0;
-            			}
-
-            			& > *:last-child {
-            				margin-bottom: 0;
-            			}
-            		}
-            	}
-
-            }
-
             // ctas
             $cta_bg: #dadac8;
             $btn_bg: #236670;
@@ -1016,4 +967,59 @@
     			margin-bottom: 0;
     		}
     	}
+    }
+
+    // accordions
+    .cvmbs-accordions {
+        margin-top: 1.5em;
+    }
+
+    .cvmbs-accordion {
+
+        &.has-loaded {
+            margin-bottom: 1.25rem;
+        }
+
+        &__title {
+            .has-loaded & {
+                margin: 0;
+            }
+        }
+
+        &__toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: #d3d3d3;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        &__content {
+            transition: all 360ms cubic-bezier(0.19, 1, 0.22, 1);
+
+            .has-loaded & {
+                opacity: 1;
+                width: 100%;
+                height: 100%;
+                max-height: 1000vh;
+                background: #eee;
+                padding: 1rem;
+
+                &[aria-hidden="true"] {
+                    display: none;
+                    overflow: hidden;
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    max-height: 0;
+                }
+
+                & > *:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
     }

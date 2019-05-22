@@ -24,7 +24,7 @@
         margin: 0;
         padding: 0 5rem 0 5rem;
 
-        @include fill( $dark, 0.185 );
+        @include fill( $dark, 0.385 );
 
         background: {
 
@@ -57,12 +57,28 @@
 
         -webkit-app-region: drag;
 
+        // mobile
+        @include breakpoint ( small only ) {
+
+            height: 4rem;
+            padding: 0 4rem 0 4rem;
+
+        }
+
         // secondary
         .page-template-secondary &,
         .single-degree-program &,
+        .page-template-directory &,
         .archive & {
 
             @include fill( $g135, 0.000 );
+
+        }
+
+        // places archive
+        .post-type-archive-place & {
+
+            @include fill( $dark, 0.085 );
 
         }
 
