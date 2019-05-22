@@ -1,0 +1,369 @@
+// stylesheet :: layered layout page styles
+
+    // settings
+    $pagebase : #E5E7E7;
+
+    // styles
+    #site-layout {
+
+        // class hook
+        &.snapshot {
+
+            @include color( $app05, 0.265 );
+
+            // header
+            .page-header {
+
+                // styled
+                &.styled {
+
+                    position: absolute;
+
+                    top: 0;
+                    right: 0;
+                    left: 0;
+
+                    z-index: 10;
+
+                    @include flex-v-b-h-s( false );
+
+                    height: 50vh;
+                    padding: 0 12vh 3rem 12vh;
+
+                    @include fill( $cvnavy, 0.000 );
+
+                    background: {
+
+                        repeat: no-repeat;
+                        size: cover;
+                        position: center center;
+                        attachment: fixed;
+
+                    }
+
+                    // before
+                    &:before {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 0;
+
+                        background: {
+
+                            image:
+
+                                linear-gradient(
+
+                                    95deg,
+                                    transparentize( $blue, 0.585 ) 0%,
+                                    transparentize( $cvellow, 0.615 ) 100%
+
+                                )
+
+                            ;
+
+                        }
+
+                        background: {
+
+                            image:
+
+                                linear-gradient(
+
+                                    10deg,
+                                    transparentize( $cvnavy, 0.235 ) 0%,
+                                    transparentize( red, 1.000 ) 70%
+
+                                )
+
+                            ;
+
+                        }
+
+                    }
+
+                    // after
+                    &:after {
+
+                        content: '';
+
+                        position: absolute;
+
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+
+                        z-index: 1;
+
+                    }
+
+                    // common
+                    .page-title,
+                    .page-subtitle,
+                    .page-intro {
+
+                        position: relative;
+
+                        z-index: 10;
+
+                    }
+
+                    // title
+                    .page-title {
+
+                        @include flex-h-s-v-c( true );
+
+                        width: auto;
+                        margin: 0 0 1.5rem 0;
+
+                        border: none;
+
+                        @include font( $klavislim, 3rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 2rem, 0.045em );
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                    // subtitle
+                    .page-subtitle {
+
+                        @include flex-h-s-v-c( true );
+
+                        margin: 0 0 1rem 0;
+
+                        @include font( $klavislim, 1.5rem, 400 );
+
+                        @include text( $up );
+
+                        @include typo( 1.25rem, 0.045em );
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                    // intro
+                    .page-intro {
+
+                        margin: 0;
+
+                        @include font( $industry, 0.75rem, 600 );
+
+                        @include typo( 1.5rem, 0.045em );
+
+                        // @include color( $rite-lite, 0.000 );
+                        @include color( white, 0.125 );
+
+                    }
+
+                }
+
+            }
+
+            // content container
+            #content-container {
+
+                padding: 0 0 0 0;
+
+                @include fill( $pagebase, 0.000 );
+
+            }
+
+            // content area
+            .content-area {
+
+                // styled
+                &.styled {
+
+                    padding: calc( 50vh + 5rem ) 0 0 0;
+
+                }
+
+                // default
+                &.default {
+
+                    padding: 0 0 0 0;
+
+                }
+
+            }
+
+            // demographics
+            #demographics {
+
+                margin: 0 5rem 0 5rem;
+                padding: 0 0 3rem 0;
+
+                border-bottom: 1px solid grey;
+
+            }
+
+            // map
+            #map {
+
+                margin: 0 5rem 0 5rem;
+                padding: 2rem 0 3rem 0;
+
+                border-bottom: 1px solid grey;
+
+            }
+
+            // statistics
+            #statistics {
+
+                margin: 0 5rem 0 5rem;
+                padding: 3rem 0 3rem 0;
+
+                border-bottom: 1px solid grey;
+
+                // content blocks
+                .content-block {
+
+                    @include flex-v-c-h-c( false );
+
+                    @include text( none, center );
+
+                }
+
+                // common
+                span {
+
+                    display: block;
+
+                }
+
+                // number
+                .number {
+
+                    margin: 0 0 1rem 0;
+
+                    @include font( $klavislim, 6rem, 500 );
+
+                    @include typo( 4rem, 0.025em );
+
+                    @include color( $cvellow, 0.000 );
+
+                }
+
+                // title
+                .title {
+
+                    width: 80%;
+                    margin: 0 0 1rem 0;
+                    padding: 0 0 1rem 0;
+
+                    border-bottom: 2px dotted transparentize( $app05, 0.645 );
+
+                    @include font( $klavislim, 2.25rem, 400 );
+
+                    @include text( $up );
+
+                    @include typo( 2.5rem, -0.025em );
+
+                    @include color( $g140, 0.000 );
+
+                }
+
+                // caption
+                .caption {
+
+                    @include font( $klavislim, 1.5rem, 400 );
+
+                    @include typo( 2rem, -0.025em );
+
+                    @include color( $app05, 0.565 );
+
+                }
+
+                // rural
+                #rural-areas {
+
+                    // number
+                    .number {
+
+                        @include font( $vitesse, 5.5rem, 600 );
+
+                        @include typo( 4rem, -0.025em );
+
+                        @include color( $g140, 0.000 );
+
+                    }
+
+                    // title
+                    .title {
+
+                        @include color( $cvellow, 0.000 );
+
+                    }
+
+                }
+
+            }
+
+            // languages
+            #languages {
+
+                @include flex-h-j-v-c( false );
+
+                margin: 0 5rem 0 5rem;
+                padding: 3rem 0 3rem 0;
+
+            }
+
+            // content row
+            .content-row {
+
+                // class
+                &.thirds {
+
+                    @include flex-h-j-v-c( false );
+
+                    // min-height: 20rem;
+                    padding: 0 5rem 0 5rem;
+
+                    // blocks
+                    .content-block {
+
+                        @include flex-h-c-v-c( false );
+
+                        flex-basis: 33.3333333%;
+
+                        height: 100%;
+                        padding: 2rem 2rem 2rem 2rem;
+
+                        border-right: 1px solid grey;
+
+                        // last child
+                        &:last-child {
+
+                            border: none;
+
+                        }
+
+                        // images
+                        img {
+
+                            width: 100%;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

@@ -1589,6 +1589,13 @@
                 "operator": "==",
                 "value": "pages\/flexible.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "pages\/snapshot.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -1601,5 +1608,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1557331813
+    "modified": 1558483560
 }
