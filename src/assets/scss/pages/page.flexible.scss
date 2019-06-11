@@ -209,6 +209,71 @@
 
             }
 
+            // notification
+            .notification {
+
+                padding: 4vw 8vw 4vw 8vw;
+
+                // title
+                h3 {
+
+                    @include color( white, 0.000 );
+
+                }
+
+                // text
+                p {
+
+                    @include color( white, 0.000 );
+
+                    margin: 0 0 0 0;
+
+                }
+
+                // alert
+                &.alert {
+
+                    @include fill( red, 0.465 );
+
+                    // title
+                    h3 {
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                    // text
+                    p {
+
+                        @include color( white, 0.000 );
+
+                    }
+
+                }
+
+                // warning
+                &.warning {
+
+                    @include fill( $cvellow, 0.265 );
+
+                }
+
+                // info
+                &.info {
+
+                    @include fill( $blue, 0.315 );
+
+                }
+
+                // success
+                &.success {
+
+                    @include fill( $g140, 0.365 );
+
+                }
+
+            }
+
             // quotation
             .page-quote {
             	padding: 8vw;
@@ -908,6 +973,7 @@
             			// color: $sec_temp_off_white;
             			line-height: 1.2;
             			text-align: center;
+                        color: white;
 
             			&:hover {
             				background: darken($btn_bg, 2.5%);

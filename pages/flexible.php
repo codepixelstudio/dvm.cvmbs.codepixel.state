@@ -42,8 +42,6 @@
                 $page_notification = get_field( 'page_notification' );
                 $notification = $page_notification[ 'notification' ];
 
-                // print_r( $notification );
-
                 if ( $notification ) {
 
                     get_template_part( 'elements/blocks/block.notification' );

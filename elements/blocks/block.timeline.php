@@ -41,8 +41,6 @@
 
 									if ( $date_style ) {
 
-										// $date = dateFormat(  )
-
 										echo $entry_date;
 
 									} else {
